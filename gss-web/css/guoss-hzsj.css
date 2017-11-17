@@ -1,0 +1,176 @@
+.bg{
+	width: 100%;
+	height: 180px;
+	background: url(../img/tiaofu.png);
+	position: relative;
+	margin-top: 80px;
+}
+.link{
+	width: 1200px;
+	height: 180px;
+	margin: 0 auto;
+}
+.busin{
+	margin-top: 100px;
+	float: left;
+	width: 1200px;
+	height: 104px;
+	background:white;
+}
+.cold{
+	width: 1120px;
+	height: 104px;
+	margin-left: 40px;
+	border-bottom: 1px solid #f2f2f2;
+}
+.business{
+	width: 300px;
+	height: 104px;
+	float: left;
+	line-height: 104px;
+}
+.span1{
+	font-size: 20px;
+	color: rgb(51,51,51);
+}
+.span2{
+	font-size: 18px;
+	color: rgb(119,119,119);
+}
+.search{
+	width: 470px;
+	height: 37px;
+    float: right;
+    margin-top: 35px;
+}
+.search_left{
+	width: 45px;
+	height: 37px;
+	float: left;
+	cursor: pointer;
+}
+.search_left img{
+	width: 45px;
+	height: 37px;
+}
+.search_right{
+	width: 425px;
+	height: 37px;
+	float: left;
+}
+.search_right input{
+	width: 423px;
+	height: 35px;
+	border: 1px solid #f2f2f2;
+	outline: none;
+	font-size: 18px;
+	text-indent: 3px;
+	color: rgb(115,115,115);
+}
+.search_right input:hover{
+	border-color: #f8b62c;
+}
+.comperate{
+	width: 1140px;
+	height: 680px;
+	margin:20px auto;
+}
+.comperate_text{
+	width: 1140px;
+	height: 680px;
+	margin-left: -10px;
+}
+.comperate_text ul{
+	width: 263px;
+	height: 300px;
+	float: left;
+	background: #f8b62c;
+	margin-left: 20px;
+	margin-top: 32px;
+	outline: none;
+	border: 1px solid #f2f2f2;
+}
+.comperate_text ul:hover{
+	border-color: #f8b62c;
+}
+.yaoj{
+	width: 263px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 18px;
+    color: rgb(255,255,255);
+    list-style: none;
+}
+.sgsc{
+    width: 263px;
+    height: 33px;
+    text-align: center;
+    font-size: 14px;
+    color: rgb(255,255,255);
+    list-style: none;
+}
+.comperate_text ul a{
+	text-decoration: none;
+}
+.join{
+	width: 1140px;
+	height: 360px;
+	margin: 100px auto;	
+}
+.attend{
+	width: 350px;
+	height: 360px;
+	float: left;
+	margin-left: 220px;
+}
+.attend_img,.joining_img{
+	width: 120px;
+	height: 120px;
+	margin-left: 115px;
+}
+.attend_title,.joining_title{
+	text-align: center;
+	width: 350px;
+	height: 50px;
+	font-size: 18px;
+	color: rgb(51,51,51);
+	line-height: 50px;
+}
+.attend_intr,.joining_intr{
+	width: 350px;
+	height: 60px;
+	line-height: 30px;
+	font-size: 18px;
+	color: rgb(51,51,51);
+}
+.attend_app{
+	width: 240px;
+	height: 48px;
+	font-size: 18px;
+	margin-top: 48px;
+	margin-left: 55px;
+	background: #0cbfa1;
+	text-align: center;
+	line-height: 48px;
+}
+.attend_app a,.joining a{
+	text-decoration: none;
+	color: white;
+}
+.joining{
+	width: 320px;
+	height: 360px;
+	float: left;
+	margin-left: 40px;
+}
+.joining_tel{
+	width: 250px;
+	height: 48px;
+	margin-top: 48px;
+	margin-left: 55px;
+	background: #f9b552;
+	text-align: center;
+	line-height: 48px;
+	color: white;
+}

@@ -1,0 +1,177 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	width: 100%;
+	font-family: '微软雅黑';
+}
+.top{
+	width: 100%;
+	height: 80px;
+	background:  #dbdbdb;
+	z-index: 999;	
+	position: -ms-device-fixed;
+	position: fixed;
+	top: 0;
+	left: 0;
+	
+}
+.header{
+	width: 1140px;
+	height: 80px;
+	background: #dbdbdb;
+	margin: 0 auto;
+}
+.header_left{
+	width: 190px;
+	height: 80px;
+	float: left;
+	margin-left: 70px;
+}
+.header_left img{
+	margin-top: 18px;
+}
+.header_right{
+	width: 630px;
+	height: 80px;
+	float: left;
+	margin-left: 226px;
+}
+.header ul{
+	width: 630px;
+	height: 80px;
+}
+.header_right ul li{
+	float: left;
+	list-style: none;
+	width: 100px;
+	height: 80px;
+	text-align: center;
+	line-height: 80px;
+	font-size: 16px;
+	margin-left: 5px;
+	font-weight: bold;
+}
+.header_right ul li a:hover{
+	color: #f8b62c;
+}
+.header_right ul li a{
+	text-decoration: none;
+	color: rgb(51,51,51);
+}
+.bottom{
+	width: 100%;
+	height: 230px;
+	background: #f9f9f9;
+}
+.base{
+	width: 1140px;
+	height: 230px;
+	margin: 0 auto;
+	background: #f9f9f9;
+}
+.lxwm{
+	width: 250px;
+	height: 220px;
+	float: left;
+	margin-left: 120px;
+}
+.lxwm_title{
+	width: 250px;
+	height: 30px;
+	margin-top: 40px;
+}
+.lxwm_content,.lxwm_content ul{
+	width: 250px;
+	height: 120px;
+	margin-top: 20px;
+}
+.lxwm_content ul li{
+	list-style: none;
+	line-height: 25px;
+	color: rgb(85,85,85);
+}
+.gywm{
+	width: 260px;
+	height: 220px;
+	float: left;
+	margin-left: 140px;
+}
+.gywm_title{
+	width: 260px;
+	height: 30px;
+	margin-top: 40px;
+}
+.gywm_content,.gywm_content ul{
+	width: 260px;
+	height: 80px;
+	margin-top: 20px;
+}
+.gywm_content ul li{
+	list-style: none;
+	line-height: 25px;
+}
+.gywm_content a{
+	color: rgb(85,85,85);
+	text-decoration: none;
+}
+.gybz{
+	width: 250px;
+	height: 220px;
+	float: left;
+	margin-left: 120px;
+}
+.gybz_title{
+	width: 250px;
+	height: 30px;
+	margin-top: 40px;
+}
+.gybz_content,.gybz_content ul{
+	width: 300px;
+	height: 80px;
+	margin-top: 20px;
+}
+.gybz_content ul li{
+	list-style: none;
+	line-height: 25px;
+}
+.gybz_content a{
+	color: rgb(85,85,85);
+	text-decoration: none;
+}
+.base img{
+	width: 30px;
+    height: 30px;
+    float: left;
+}
+.lxwm_title span,.gywm_title span,.gybz_title span{
+	width: 200px;
+    height: 30px;
+    margin-left: 10px;
+    line-height: 30px;
+    font-size: 18px;
+    color: rgb(85,85,85);
+}
+.gywm a:hover,.gybz a:hover{
+	color: #f8b62c;
+}
+.copy{
+	width: 100%;
+	height: 80px;
+	background: #f2f2f2;
+}
+.dibu{
+	width: 1140px;
+	height: 80px;
+	margin: 0 auto;
+	font-size: 14px;
+	color: rgb(85,85,85);
+	line-height: 80px;
+	text-align: center;
+	background: #f2f2f2;
+}
+.blank{
+	width: 100%;
+	height: 30px;
+}

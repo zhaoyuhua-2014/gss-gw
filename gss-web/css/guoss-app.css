@@ -1,0 +1,126 @@
+
+.download{
+	width: 100%;
+	height: 180px;
+	margin-top: 80px;
+	background: url(../img/tiaofu.png);
+}
+.loaddown{
+	width: 1200px;
+	height: 180px;
+	margin: 0 auto;
+}
+.load{
+	width: 1200px;
+	height: 104px;
+	float: left;
+	margin-top: 100px;
+	line-height: 100px;
+	background:white;
+}
+.loadup{
+	width: 1116px;
+	height: 104px;
+	margin: 0 auto;
+	border-bottom: 1px solid #f2f2f2;
+}
+.span1{
+	font-size: 20px;
+	color: rgb(51,51,51);
+}
+.span2{
+	font-size: 18px;
+	color: rgb(119,119,119);
+}
+.app{
+	width: 1140px;
+	height: 600px;
+	margin: 60px auto;
+	border-bottom: 2px dashed #ffc82f;
+}
+.app_left{
+	width: 440px;
+	height: 542px;
+	float: left;
+}
+.app_right{
+	width: 350px;
+	height: 542px;
+	margin-left: 10px;
+	float: left;
+}
+.app_right dl{
+	width: 100%;
+	height: 160px;
+	margin-top: 20px;
+}
+.app_right dl dt,.app_right dl dd{
+	float: left;
+}
+.app_right dl dt{
+	width: 160px;
+	height: 160px;
+}
+.app_right dl dt img{
+	width: 100%;
+	height: 100%;
+}
+.app_right dl dd{
+	padding-top:34px ;
+	padding-left: 20px;
+	line-height: 40px;
+}
+.app_right1{
+	width: 350px;
+	height: 94px;
+}
+.app_right1 img{
+	float: left;
+}
+.xz{
+	float: left;
+	font-size: 32px;
+	color: rgb(51,51,51);
+	margin-top: 30px;
+	margin-left: 24px;
+}
+.text{
+	width: 1140px;
+	height: 220px;
+	margin: 30px auto;
+}
+.text_left{
+	width: 800px;
+	height: 200px;
+	float: left;
+}
+.text_left1{
+	width: 800px;
+	height: 20px;
+	color: #f8b62c;
+	font-size: 20px;
+	text-align: center;
+	line-height: 20px;
+	margin-left: 50px;
+	margin-top: 50px;
+}
+.text_left2{
+	width: 800px;
+	height: 30px;
+	font-size: 20px;
+	color: rgb(101,101,101);
+	text-align: center;
+	line-height: 30px;
+	margin-left: 50px;
+	margin-top: 20px;
+}
+.text_right{
+	width: 152px;
+	height: 152px;
+	float: left;
+	margin-top: 10px;
+	background: url(../img/app_bottom.png);
+}
+.bottom{
+	margin-top: 30px;
+}
