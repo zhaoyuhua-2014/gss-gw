@@ -111,11 +111,11 @@
 }
 .develop_text_left{
 	width: 1140px;
+	padding-top: 30px;
 }
-.first{
+.first,.first1{
 	width: 1140px;
 	height: 30px;
-	margin-top: 30px;
 }
 .year{
 	width: 60px;
@@ -177,10 +177,7 @@
 .shu img{
 	margin-left: 175px;
 }
-.first1{
-	width: 1140px;
-	height: 30px;
-}
+
 /*.deveolp_text_right{
 	width: 800px;
 	height: 520px;

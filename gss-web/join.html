@@ -6,9 +6,9 @@
 	<meta name="Keywords" content="果速送，水果平台，果然好，鲜果，水果采购配送，精品水果，时令水果、蔬菜干果、国产精品、进口水果"/>
 	<meta name="Description" content="果速送是全国地区第一家一站式水果采购配送的服务平台，目前业务已覆盖整个杭州地区，南京地区,选择果速送，开店很轻松。期待与你一路前行"/>
 	<link rel="icon" href='img/jlxq_logo.png' type="image/x-icon"/>
-	<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=68f1f7850d75a2c422f417cc77331395&plugin=AMap.DragRoute"></script>
-    <script type="text/javascript" src="http://webapi.amap.com/js/marker.js"></script>
-    <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+	<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.4.4&amp;key=68f1f7850d75a2c422f417cc77331395&amp;plugin=AMap.DragRoute"></script>
+	<script type="text/javascript" src="http://webapi.amap.com/js/marker.js"></script>
+	<script src="//webapi.amap.com/ui/1.0/main.js?v=1.0.11"></script>
     <script type="text/javascript" src='js/jquery-1.7.2.min.js'></script>
 	<link rel="stylesheet" href="css/guoss-all.css">
 	<link rel="stylesheet" href="css/guoss-jrwm.css">
@@ -47,12 +47,12 @@
 	</div>
 	<div class="xinxi">
 		<div class="xinxi_left">
-			<div class="map-box" id='mapContainer'>
+			<div class="map-item map-box" id='mapContainer'>
             </div>
-            <div class="map" id='mapContainer1'></div>
+            <div class="map-item map" id='mapContainer1'></div>
 		</div>
 		<div class="xinxi_right">
-            <div class="gsdz">
+            <!--<div class="gsdz">
                     <div class="gsdz_title">公司地址：</div>
                     <ul>
                        <li class='dz'>总部：浙江省杭州市滨江区滨安路1180号华业大厦2308-2313室</li>
@@ -68,7 +68,8 @@
                        <li>传真：<span class='cz'>0571-87003818</span></li>
                        <li>Email：<span class="Email">zs-info@info.cn</span></li>
                     </ul>
-            </div>
+            </div>-->
+            <div class="map-item" id="mapContainer3" ></div>
         </div>
 	</div>
 	<div class="intend">
@@ -80,7 +81,7 @@
 			</div>
 			<div class="intend_right">
 				<table>
-					<tr class="th">
+					<!--<tr class="th">
 						<th class="lie1">职位名称</th>
 						<th class="lie2">职位类别</th>
 						<th class="lie3">工作地点</th>
@@ -88,54 +89,54 @@
 						<th class="lie5">更新时间</th>
 					</tr>
 					<tr>
-						<td class="lie1"><a href="guoss.ywzg.html">业务主管</a></td>
-						<td class="lie2">销售</td>
-						<td class="lie3">杭州站</td>
-						<td class="lie4">2</td>
-						<td class="lie5">2017-5-19</td>
-					</tr>
-					<tr>
-						<td class="lie1"><a href="guoss.ywzg.html">业务专员</a></td>
+						<td class="lie1"><a href="guoss.ywzg.html">仓库管理员</a></td>
 						<td class="lie2">销售</td>
 						<td class="lie3">杭州站</td>
 						<td class="lie4">10</td>
-						<td class="lie5">2017-5-19</td>
+						<td class="lie5">2018-06-07</td>
 					</tr>
 					<tr>
-						<td class="lie1"><a href="guoss.shzg.html">售后主管</a></td>
-						<td class="lie2">售后</td>
+						<td class="lie1"><a href="guoss.ywzg.html">数据分析</a></td>
+						<td class="lie2">数据分析</td>
 						<td class="lie3">杭州站</td>
 						<td class="lie4">2</td>
-						<td class="lie5">2017-5-19</td>
+						<td class="lie5">2018-06-07</td>
 					</tr>
 					<tr>
-						<td class="lie1"><a href="guoss.shzy.html">售后专员</a></td>
-						<td class="lie2">售后</td>
+						<td class="lie1"><a href="guoss.shzg.html">客服专员</a></td>
+						<td class="lie2">客服</td>
+						<td class="lie3">杭州站</td>
+						<td class="lie4">2</td>
+						<td class="lie5">2018-06-07</td>
+					</tr>
+					<tr>
+						<td class="lie1"><a href="guoss.shzy.html">采购专员</a></td>
+						<td class="lie2">销售</td>
 						<td class="lie3">杭州站</td>
 						<td class="lie4">5</td>
-						<td class="lie5">2017-5-19</td>
+						<td class="lie5">2018-06-07</td>
 					</tr>
 					<tr>
 						<td class="lie1"><a href="guoss.cgjl.html">采购经理</a></td>
 						<td class="lie2">采购</td>
 						<td class="lie3">杭州站</td>
 						<td class="lie4">1</td>
-						<td class="lie5">2017-5-19</td>
+						<td class="lie5">2018-06-07</td>
 					</tr>
 					<tr>
 						<td class="lie1"><a href="guoss.cg.html">采购主管</a></td>
 						<td class="lie2">采购</td>
 						<td class="lie3">杭州站</td>
 						<td class="lie4">2</td>
-						<td class="lie5">2017-5-19</td>
+						<td class="lie5">2018-06-07</td>
 					</tr>
 					<tr>
 						<td class="lie1"><a href="guoss.cg.html">采购专员</a></td>
 						<td class="lie2">采购</td>
 						<td class="lie3">杭州站</td>
 						<td class="lie4">5</td>
-						<td class="lie5">2017-5-19</td>
-					</tr>
+						<td class="lie5">2018-06-07</td>
+					</tr>-->
 				</table>
 				<div class="question">
 				    <div class="zplc">
@@ -169,7 +170,7 @@
 				    </div>
 				    <div class="gzdd">
 				    	<div class="gzdd_title">工作地点</div>
-				    	<div class="gzdd_content">公司总部位于杭州滨江，杭州站仓储点位于杭州勾庄，南京站仓储点位于。果速送会依据岗位需求，合理安排就职地点。</div>
+				    	<div class="gzdd_content">公司总部位于浙江省杭州市滨江区滨安路1180号华业大厦2308-2313室，杭州站仓储点位于杭州市余杭区良渚街道 （勾庄） 博园西路7号酩创园一楼B01，南京站仓储点位于南京市江宁区东山街道润发路330号，宁波站仓储点位于宁波市鄞州区金辉东路18号3号门。果速送会依据岗位需求，合理安排就职地点。</div>
 				    </div>
 				</div>
 			</div>
@@ -227,33 +228,132 @@
        zoom:17,
        center:[120.180579,30.18846]
     });
-    var marker = new AMap.Marker({
-            position: [120.180579,30.18846]
-    });
-    marker.setMap(map);
+//  var marker = new AMap.Marker({
+//          position: [120.180579,30.18846]
+//  });
+    //marker.setMap(map);
 	
 	var map1 = new AMap.Map('mapContainer',{
        resizeEnable:true,
        zoom:15,
        center:[120.102548,30.37434]
     });
-    var marker = new AMap.Marker({
-            position: [120.102548,30.37434]
-    });
-    marker.setMap(map1);
 
     var map2 = new AMap.Map('mapContainer1',{
        resizeEnable:true,
        zoom:15,
        center:[118.8711510000,31.9888300000]
     });
-    var marker = new AMap.Marker({
-            position: [118.8711510000,31.9888300000]
+    var map3 = new AMap.Map('mapContainer3',{
+       resizeEnable:true,
+       zoom:15,
+       center:[121.6171900000,29.8218800000]
     });
-    marker.setMap(map2);
   
-
- 
+	AMapUI.loadUI(['overlay/SimpleInfoWindow'], function(SimpleInfoWindow) {
+		
+        var marker1 = new AMap.Marker({
+            map: map,
+            zIndex: 9999999,
+            position: map.getCenter()
+        });
+        
+        var infoWindow1 = new SimpleInfoWindow({
+            infoTitle: '<strong>杭州掌烁信息科技有限公司</strong>',
+            infoBody: '<p class="my-desc">电话:0571-28107306、0571-28107307<br/> 地址:浙江省杭州市滨江区滨安路1180号华业大厦2308-2313室</p>',
+			//基点指向marker的头部位置
+            offset: new AMap.Pixel(0, -31)
+        });
+        function openInfoWin1() {
+            infoWindow1.open(map, marker1.getPosition());
+        }
+        //marker 点击时打开
+        AMap.event.addListener(marker1, 'click', function() {
+            openInfoWin1();
+        });
+        openInfoWin1();
+        
+        var marker2 = new AMap.Marker({
+            map: map1,
+            zIndex: 9999999,
+            position: map1.getCenter()
+        });
+        
+        var infoWindow2 = new SimpleInfoWindow({
+            infoTitle: '<strong>杭州果速科技有限公司</strong>',
+            infoBody: '<p class="my-desc">电话:400-0169682<br/> 地址:杭州市余杭区良渚街道 （勾庄） 博园西路7号酩创园一楼B01</p>',
+			//基点指向marker的头部位置
+            offset: new AMap.Pixel(0, -31)
+        });
+        function openInfoWin2() {
+            infoWindow2.open(map1, marker2.getPosition());
+        }
+        //marker 点击时打开
+        AMap.event.addListener(marker2, 'click', function() {
+            openInfoWin2();
+        });
+        openInfoWin2();
+        
+        var marker3 = new AMap.Marker({
+            map: map2,
+            zIndex: 9999999,
+            position: map2.getCenter()
+        });
+        
+        var infoWindow3 = new SimpleInfoWindow({
+            infoTitle: '<strong>南京果送信息科技有限公司</strong>',
+            infoBody: '<p class="my-desc">电话:025-52112127<br/> 地址:南京市江宁区东山街道润发路330号，江苏鞋城1号楼一楼</p>',
+			//基点指向marker的头部位置
+            offset: new AMap.Pixel(0, -31)
+        });
+        function openInfoWin3() {
+            infoWindow3.open(map2, marker3.getPosition());
+        }
+        //marker 点击时打开
+        AMap.event.addListener(marker3, 'click', function() {
+            openInfoWin3();
+        });
+        openInfoWin3();
+        
+        
+        var marker4 = new AMap.Marker({
+            map: map3,
+            zIndex: 9999999,
+            position: map3.getCenter()
+        });
+        
+        var infoWindow4 = new SimpleInfoWindow({
+            infoTitle: '<strong>宁波果送信息科技有限公司</strong>',
+            infoBody: '<p class="my-desc">电话:18658274055（周先生）<br/> 地址:宁波市鄞州区金辉东路18号3号门</p>',
+			//基点指向marker的头部位置
+            offset: new AMap.Pixel(0, -31)
+        });
+        function openInfoWin4() {
+            infoWindow4.open(map3, marker4.getPosition());
+        }
+        //marker 点击时打开
+        AMap.event.addListener(marker4, 'click', function() {
+            openInfoWin4();
+        });
+        openInfoWin4();
+        
+       
+    });
+ 	var jsonData = [
+ 		{name:'仓库管理员',linkUrl:'recruitDetails.html?type=0',typeText:'全职',address:'杭州-余杭区-勾庄',num:'5',time:'2018-06-07'},
+ 		{name:'数据分析',linkUrl:'recruitDetails.html?type=1',typeText:'全职',address:'杭州-滨江区',num:'5',time:'2018-06-07'},
+ 		{name:'客服专员',linkUrl:'recruitDetails.html?type=2',typeText:'全职',address:'杭州-余杭区-勾庄',num:'5',time:'2018-06-07'},
+ 		{name:'采购专员',linkUrl:'recruitDetails.html?type=3',typeText:'全职',address:'杭州-余杭区-勾庄',num:'5',time:'2018-06-07'}
+ 	];
+ 	
+ 	var html = ''
+ 		html += '<tr class="th"><th class="lie1">职位名称</th><th class="lie2">职位类别</th><th class="lie3">工作地点</th><th class="lie4">招聘人数</th><th class="lie5">更新时间</th></tr>'
+ 		
+ 	for (var i in jsonData) {
+		html += '<tr><td class="lie1"><a href="'+jsonData[i].linkUrl+'">'+jsonData[i].name+'</a></td><td class="lie2">'+jsonData[i].typeText+'</td><td class="lie3">'+jsonData[i].address+'</td><td class="lie4">'+jsonData[i].num+'</td><td class="lie5">'+jsonData[i].time+'</td></tr>'		
+ 	}
+ 	$(".intend_right table").html(html)
+ 	
     var zpgw=document.getElementsByClassName('zpgw')[0];
     var cjwt=document.getElementsByClassName('cjwt')[0];
     var table=document.getElementsByTagName('table')[0];
