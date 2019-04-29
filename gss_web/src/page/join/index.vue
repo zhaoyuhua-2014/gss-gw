@@ -26,7 +26,7 @@
                     </thead>
                     <tbody>
                       <tr v-for="(item,index) in data" :key="index">
-                        <td>{{item.name}}</td>
+                        <td class="td_hover" @click="joinDetail(index)">{{item.name}}</td>
                         <td>{{item.typeText}}</td>
                         <td>{{item.address}}</td>
                         <td>{{item.num}}</td>
@@ -186,6 +186,12 @@ import headTemplate from "../../components/headTemplate.vue";
             });
             openInfoWinThree();
         });
+    },
+    methods:{
+      joinDetail(index){
+        let routerJump = this.$router.resolve({path:'/jobDetails',query:{index:index}})
+        window.open(routerJump.href,'_blank')
+      }
     }
   }
   let thData =[
@@ -285,6 +291,9 @@ import headTemplate from "../../components/headTemplate.vue";
         }
       }
     }
-
+    .td_hover:hover{
+      color:#f8b62c;
+      cursor: pointer;
+    }
   }
 </style>

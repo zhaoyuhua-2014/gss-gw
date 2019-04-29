@@ -7,6 +7,7 @@ const introduce = r => require.ensure([], () => r(require('../page/introduce/ind
 const cooperation = r => require.ensure([], () => r(require('../page/cooperation/index.vue')), 'cooperation');
 const download = r => require.ensure([], () => r(require('../page/download/index.vue')), 'download');
 const join = r => require.ensure([], () => r(require('../page/join/index.vue')), 'join');
+const jobDetails = r => require.ensure([], () => r(require('../page/join/jobDetails/index.vue')), 'jobDetails');
 const service = r => require.ensure([], () => r(require('../page/service/index.vue')), 'service');
 
 
@@ -40,6 +41,10 @@ export default new Router({
       {
         path: '/join',
         component: join,
+      },
+      {
+        path:'/jobDetails',
+        component:jobDetails,
       },
       {
         path: '/service',
