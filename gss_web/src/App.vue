@@ -15,6 +15,7 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
 }
 h1, h2, h3, h4, h5, h6, p, figure, form, blockquote { margin: 0; }
 ul, ol, li, dl, dd { margin: 0; padding: 0; }

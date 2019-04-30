@@ -11,16 +11,16 @@
       <!-- 轮播（Carousel）项目 -->
       <div class="carousel-inner" >
         <div class="item active" >
-        <img src="../image/lunbo1.png"  alt="First slide">
+        <img src="../../image/lunbo1.png"  alt="First slide">
         </div>
         <div class="item"  >
-        <img src="../image/lunbo2.png" alt="Second slide">
+        <img src="../../image/lunbo2.png" alt="Second slide">
         </div>
         <div class="item"  >
-        <img src="../image/lunbo3.png" alt="Third slide">
+        <img src="../../image/lunbo3.png" alt="Third slide">
         </div>
         <div class="item" >
-        <img src="../image/lunbo4.png" alt="Fourth slide">
+        <img src="../../image/lunbo4.png" alt="Fourth slide">
         </div>
       </div>
     </div>
@@ -48,6 +48,9 @@
     width:100%;
     height:100%;
     animation:mymove 5s infinite linear;
+    -webkit-animation:mymove 5s infinite linear;
+    -moz-animation: mymove 5s infinite linear;
+
   }
 }
 .carousel-indicators{
@@ -64,6 +67,44 @@
   }
 }
 @keyframes mymove
+{
+    0%{
+      transform: scale(1.12);  /*开始为原始大小*/
+    }
+    25%{
+      transform: scale(1.06);
+    }
+    50%{
+      transform: scale(1);
+    }
+    75%{
+      transform: scale(1.06);
+    }
+    100%{
+      transform: scale(1.12);
+    }
+
+}
+@-webkit-keyframes   mymove
+{
+    0%{
+      transform: scale(1.12);  /*开始为原始大小*/
+    }
+    25%{
+      transform: scale(1.06);
+    }
+    50%{
+      transform: scale(1);
+    }
+    75%{
+      transform: scale(1.06);
+    }
+    100%{
+      transform: scale(1.12);
+    }
+
+}
+@-moz-keyframes mymove
 {
     0%{
       transform: scale(1.12);  /*开始为原始大小*/

@@ -33,9 +33,9 @@
 </template>
 
 <script>
-import headerNav from "../../components/nav.vue";
-import comFooter from "../../components/footer.vue";
-import headTemplate from "../../components/headTemplate.vue";
+import headerNav from "../../components/pc/nav.vue";
+import comFooter from "../../components/pc/footer.vue";
+import headTemplate from "../../components/pc/headTemplate.vue";
   export default {
     name:'cooperation',
     data() {

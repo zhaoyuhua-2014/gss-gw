@@ -6,6 +6,7 @@ import router from './router'
 import $ from 'jquery'
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/js/bootstrap.min.js"
+import "babel-polyfill"
 
 Vue.config.productionTip = false
 

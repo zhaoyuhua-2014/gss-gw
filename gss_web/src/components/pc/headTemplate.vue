@@ -24,7 +24,7 @@
   margin-top:80px;
   padding-top:100px;
   height:180px;
-  background-image:url(../image/tiaofu.png);
+  background-image:url(../../image/tiaofu.png);
   .container{
     height:105px;
     background-color: #fff;

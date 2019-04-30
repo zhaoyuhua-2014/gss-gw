@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-md-4">
           <dl>
-            <dt><img src="../image/bottom_lxwm.png" alt=""><span>联系我们</span></dt>
+            <dt><img src="../../image/bottom_lxwm.png" alt=""><span>联系我们</span></dt>
             <dd class="margin_top_20">微信:guosu99</dd>
             <dd>电话:400-0169-682</dd>
             <dd>邮箱:zshr@zs-info.cn</dd>
@@ -12,7 +12,7 @@
         </div>
         <div class="col-md-4">
           <dl>
-            <dt><img src="../image/bottom_gywm.png" alt=""><span>关于我们</span></dt>
+            <dt><img src="../../image/bottom_gywm.png" alt=""><span>关于我们</span></dt>
             <dd class="margin_top_20">
               <router-link :to="'introduce'" tag="span">
               公司简介
@@ -27,7 +27,7 @@
         </div>
         <div class="col-md-4">
           <dl>
-            <dt><img src="../image/bottom_cjwt.png" alt=""><span>关于帮助</span></dt>
+            <dt><img src="../../image/bottom_cjwt.png" alt=""><span>关于帮助</span></dt>
             <dd class="margin_top_20">
               <router-link :to="'download'" tag="span">
               APP下载
@@ -95,7 +95,6 @@
       span{
       display: inline-block;
       margin-left: 10px;
-      width: 200px;
       height: 30px;
       line-height: 26px;
       font-size: 18px;

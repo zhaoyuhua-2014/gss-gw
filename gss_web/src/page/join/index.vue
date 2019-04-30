@@ -57,9 +57,9 @@
 </template>
 
 <script>
-import headerNav from "../../components/nav.vue";
-import comFooter from "../../components/footer.vue";
-import headTemplate from "../../components/headTemplate.vue";
+import headerNav from "../../components/pc/nav.vue";
+import comFooter from "../../components/pc/footer.vue";
+import headTemplate from "../../components/pc/headTemplate.vue";
   export default {
     name:'join',
     data() {
@@ -189,8 +189,9 @@ import headTemplate from "../../components/headTemplate.vue";
     },
     methods:{
       joinDetail(index){
-        let routerJump = this.$router.resolve({path:'/jobDetails',query:{index:index}})
-        window.open(routerJump.href,'_blank')
+        // let routerJump =
+         this.$router.push({path:'/jobDetails',query:{index:index}})
+        // window.open(routerJump.href,'_blank')
       }
     }
   }

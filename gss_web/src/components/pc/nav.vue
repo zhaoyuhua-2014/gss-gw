@@ -4,7 +4,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4 nav_h">
-              <img class="nav_img" src="../image/title.png" alt="">
+              <img class="nav_img" src="../../image/title.png" alt="">
           </div>
           <ul class="col-md-8 nav_h row">
             <router-link :to="'home'" tag="li" class="col-md-2 li_style li_home">
@@ -26,7 +26,6 @@
                 加入我们
             </router-link>
           </ul>
-
         </div>
       </div>
     </nav>

@@ -69,7 +69,7 @@
 </template>
 
 <script>
-import headerNav from "../../../components/nav.vue";
+import headerNav from "../../../components/pc/nav.vue";
 import { constants } from 'fs';
   export default {
     name:"jobDetails",
@@ -148,6 +148,7 @@ let jsonData = [{
     }
     .details_area{
       margin-top:90px;
+      margin-bottom: 60px;
       .breadcrumb{
         margin-bottom: 50px;
         background-color: #fff;
@@ -186,6 +187,7 @@ let jsonData = [{
       }
       .job_require{
         padding: 30px 30px 50px;
+        margin-bottom: 50px;
         border:1px solid #f2f2f2;
         .require{
           li + li{
@@ -206,6 +208,7 @@ let jsonData = [{
         }
         .welfare{
           li{
+            width:9%;
             box-sizing:content-box;
             padding:6px;
             margin: 30px 0 0;
