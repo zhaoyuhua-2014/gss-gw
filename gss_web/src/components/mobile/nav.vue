@@ -2,7 +2,7 @@
   <div class="navbar-fixed-top mobile_nav" >
     <div class="nav clearfix">
       <img src="../../image/title.png" class="pull-left" alt="">
-      <img src="../../image/btn.png"  class="pull-right"   alt="" @click="collapse" >
+      <img src="../../image/mobile/btn.png"  class="pull-right"   alt="" @click="collapse" >
     </div>
     <ul class="collapse">
       <router-link :to="'home'" tag="li" class="col-md-2 li_style li_home">
@@ -45,7 +45,7 @@
 <style lang="less" >
 .mobile_nav{
   width:100%;
-  height:100%;
+  // z-index: 99;
   .nav{
     height:56px;
     background-color: #f6f6f6;
@@ -63,7 +63,7 @@
   .collapsing,
   .collapse{
     width: 100%;
-    height:100%;
+    height: 800px;
     padding-top:60px;
     font-size:18px;
     text-align: center ;
