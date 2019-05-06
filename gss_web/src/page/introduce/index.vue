@@ -327,8 +327,8 @@ let brandData = [
           p:after{
             content: "";
             position:absolute;
-            top:14px;
-            left:-20px;
+            top:20%;
+            left: -7%;
             width: 2px;
             height:100%;
             background:url(../../image/gsjs_shu.png) no-repeat center/cover;

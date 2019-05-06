@@ -48,7 +48,14 @@
             <p>{{item.des}}</p>
           </div>
         </div>
-
+        <div class="app_img">
+          <img src="../../image/app_left.png" width="226px" alt="">
+        </div>
+        <div class="part_two">
+          <img src="../../image/mobile/app3.png" alt="" width="98px">
+          <p>全国地区专业水果批发配送平台，平台最新优惠、开店实用技巧应有尽有。</p>
+          <p>果速送，实现您的0元开店梦，帮您开一家更赚钱的水果店</p>
+        </div>
       </div>
       <Mfooter></Mfooter>
     </div>
@@ -163,6 +170,22 @@ let downloadData = [
         p:first-child{
           margin-top:10px;
           margin-left: 2px;
+        }
+      }
+      .app_img{
+        padding:40px 0;
+        text-align: center;
+        border-bottom: 1px  dashed #ffc82f;
+      }
+      .part_two{
+        padding: 30px 10% 0;
+        font-size: 14px;
+        text-align: center;
+        p{
+          margin-top: 24px;
+        }
+        p:nth-child(2){
+          color:#ffc82f;
         }
       }
     }
