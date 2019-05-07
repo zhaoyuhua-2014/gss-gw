@@ -84,14 +84,11 @@ let data = [
 </script>
 
 <style lang="less">
+@import '../../style/mixin';
 // pc 样式
   .pc_service{
     .li_service{
-      background-color: #ffc82f;
-      color: #fff;
-      &:hover{
-        color:#fff !important;
-      }
+     .pcLi
     }
     .progress_display{
       margin-top: 50px;
@@ -127,7 +124,7 @@ let data = [
         }
       }
       dl:nth-child(even){
-        background-color: #f2f2f2;
+        background-color: @gray_color;
         dd{
           margin-left:0;
         }
@@ -137,7 +134,7 @@ let data = [
   // mobile样式
   .mobile_service{
     .li_service{
-      color:  #ffc82f;
+      color:  @theme_color;
     }
     .title{
       width: 100%;

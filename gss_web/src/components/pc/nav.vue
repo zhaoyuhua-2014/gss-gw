@@ -44,6 +44,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
+@import '../../style/mixin';
   #nav{
     width: 100%;
     min-width: 1200px;
@@ -68,11 +69,11 @@ export default {
   .li_style{
     text-align: center;
     line-height: 80px;
-    font-size: 16px;
+    font-size: @font_size;
     font-weight: bold;
     cursor: pointer;
     &:hover{
-       color: #ffc82f;
+       color:@theme_color;
     }
   }
 </style>

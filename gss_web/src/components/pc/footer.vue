@@ -62,6 +62,7 @@
 </script>
 
 <style lang="less" scoped>
+@import '../../style/mixin';
 .com_footer{
   margin-top:80px;
   background-color: #f9f9f9;
@@ -77,7 +78,7 @@
       text-align: center;
       line-height: 80px;
       color: #555;
-      background-color: #f2f2f2
+      background-color: @gray_color
     }
   }
   .col-md-4{
@@ -103,10 +104,10 @@
       }
     }
     dd{
-      font-size: 16px;
+      font-size: @font_size;
       line-height: 25px;
       span:hover{
-        color: #f8b62c;
+        color: @theme_color;
          cursor: pointer;
       }
     }

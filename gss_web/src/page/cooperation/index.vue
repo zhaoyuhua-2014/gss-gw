@@ -109,14 +109,11 @@ let wayData=[
 </script>
 
 <style lang="less">
+@import '../../style/mixin';
 // pc 样式
   .pc_cooperation{
     .li_cooperation{
-      background-color: #ffc82f;
-      color: #fff;
-      &:hover{
-        color:#fff !important;
-      }
+     .pcLi;
     }
     .cooperation_area{
       margin-top:60px;
@@ -127,11 +124,11 @@ let wayData=[
           padding:0;
           margin-left:20px;
           margin-bottom:20px;
-          border:1px solid #f2f2f2;
+          border:1px solid @gray_color;
           text-align: center;
           dd{
-            background-color: #ffc82f;
-            color: #fff;
+            background-color: @theme_color;
+            color: @white_color;
             p:first-child{
               font-size: 18px;
               line-height: 50px;
@@ -143,7 +140,7 @@ let wayData=[
           }
         }
         dl:hover{
-          border:1px solid #ffc82f;
+          border:1px solid @theme_color;
         }
       }
       .cooperation_way{
@@ -165,7 +162,7 @@ let wayData=[
             height: 48px;
             margin:50px auto 0;
             background-color: #0cbfa1;
-            color: #fff;
+            color: @white_color;
             border-radius: 4px;
             text-align: center;
             line-height: 48px;
@@ -178,7 +175,7 @@ let wayData=[
   // mobile 样式
   .mobile_cooperation{
     .li_cooperation{
-      color: #ffc82f;
+      color: @theme_color;
     }
     .part_one{
       padding:32px 2%  0;
@@ -187,17 +184,15 @@ let wayData=[
         margin-left:2%;
         width: 48%;
         text-align: center;
-        border: 1px solid #f2f2f2;
+        border: 1px solid @gray_color;
         dd{
           padding:6px 0;
-          background-color: #F8B62C;
-          color: #fff;
+          background-color: @theme_color;
+          color: @white_color;
           line-height: 19px;
           p:nth-child(2){
             font-size: 9px;
-            overflow:hidden; //超出的文本隐藏
-            text-overflow:ellipsis; //溢出用省略号显示
-            white-space:nowrap; //溢出不换行
+            .ellipsis
           }
         }
       }

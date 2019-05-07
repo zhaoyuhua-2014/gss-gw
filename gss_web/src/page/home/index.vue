@@ -62,7 +62,7 @@
         <router-link :to="'download'" tag="div">
           <img src="../../image/mobile/bg3.png" class="download" alt="" >
         </router-link>
-        <a href="#content_area"><img src="../../image/mobile/bg4.png"  class="down" alt=""></a>
+        <a href="#content_area" @click="animate"><img src="../../image/mobile/bg4.png"  class="down" alt=""></a>
       </div>
       <div id="content_area">
         <div class="area_first">
@@ -123,6 +123,10 @@ import Mfooter from "../../components/mobile/footer.vue";
       Mfooter
     },
     methods:{
+      animate(){
+        var id="content_area";
+        $("html,body").animate({scrollTop: $("div#"+id).offset().top}, 500);
+      }
     }
   }
 let data = [
@@ -136,20 +140,17 @@ let data = [
 </script>
 
 <style lang="less">
+@import '../../style/mixin';
   // pc端样式
   .pc_home{
     .li_home{
-      background-color: #ffc82f;
-      color: #fff;
-      &:hover{
-        color:#fff !important;
-      }
+     .pcLi
     }
     .display_area{
       .area_first{
         height:225px;
         padding-top: 40px;
-        background-color:#f8b62c;
+        background-color:@theme_color;
         img{
           display: block;
           margin: 0 auto;
@@ -158,9 +159,9 @@ let data = [
           width:1140px;
           height: 90px;
           margin: 10px auto 0;
-          font-size: 16px;
+          font-size:@font_size;
           line-height: 26px;
-          color: #fff;
+          color: @white_color;
           text-align:center;
         }
       }
@@ -173,7 +174,7 @@ let data = [
         font-size: 28px;
         text-align: center;
         span{
-          color: #f8b62c;
+          color: @theme_color;
         }
         p:nth-child(2){
           font-size: 20px;
@@ -186,7 +187,7 @@ let data = [
         }
         dd{
           line-height: 25px;
-          font-size: 16px;
+          font-size: @font_size;
         }
         .pull-right{
           text-align: right;
@@ -217,7 +218,7 @@ let data = [
           width: 20px;
           height:20px;
           border-radius:50%;
-          background-color: #f8b62c;
+          background-color: @theme_color;
         }
         img{
           position: absolute;
@@ -240,7 +241,7 @@ let data = [
   // mobile 端样式
   .mobile_home{
     .li_home{
-      color: #ffc82f;
+      color: @theme_color;
     }
     .mobile_content{
       margin-top:56px;
@@ -258,7 +259,7 @@ let data = [
         margin:60px auto;
         width:320px;
         font-size: 14px;
-        color: #fff;
+        color: @white_color;
         line-height: 24px;
       }
       .download{
@@ -292,7 +293,7 @@ let data = [
       .area_first{
         font-size: 18px;
         span{
-          color: #f8b62c;
+          color: @theme_color;
         }
         p{
           margin: 0 auto;
@@ -335,7 +336,7 @@ let data = [
             width: 14px;
             height:14px;
             border-radius:50%;
-            background-color: #f8b62c;
+            background-color: @theme_color;
           }
           img{
             position: absolute;

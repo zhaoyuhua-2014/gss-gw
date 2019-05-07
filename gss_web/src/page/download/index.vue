@@ -96,14 +96,12 @@ let downloadData = [
 </script>
 
 <style lang="less">
+@import '../../style/mixin';
+
 // pc 样式
   .pc_download{
     .li_download{
-      background-color: #ffc82f;
-      color: #fff;
-      &:hover{
-        color:#fff !important;
-      }
+      .pcLi;
     }
     .download_area{
       margin-top:80px;
@@ -134,7 +132,7 @@ let downloadData = [
       }
       .code_area{
         padding-bottom:60px;
-        border-bottom: 2px dashed #ffc82f;
+        border-bottom: 2px dashed @theme_color;
       }
       .row{
         .col-md-9{
@@ -143,7 +141,7 @@ let downloadData = [
           padding-top:80px;
           line-height: 40px;
           p:first-child{
-            color: #ffc82f;
+            color: @theme_color;
           }
         }
         .col-md-2{
@@ -155,7 +153,7 @@ let downloadData = [
   // mobile 样式
   .mobile_download{
     .li_download{
-      color: #ffc82f;
+      color: @theme_color;
     }
     .content{
       .part_one,
@@ -175,7 +173,7 @@ let downloadData = [
       .app_img{
         padding:40px 0;
         text-align: center;
-        border-bottom: 1px  dashed #ffc82f;
+        border-bottom: 1px  dashed @theme_color;
       }
       .part_two{
         padding: 30px 10% 0;
@@ -185,7 +183,7 @@ let downloadData = [
           margin-top: 24px;
         }
         p:nth-child(2){
-          color:#ffc82f;
+          color:@theme_color;
         }
       }
     }

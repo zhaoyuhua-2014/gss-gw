@@ -19,6 +19,7 @@
 </script>
 
 <style lang="less" scoped>
+@import '../../style/mixin';
 .head_template{
   width:100%;
   margin-top:80px;
@@ -27,13 +28,13 @@
   background-image:url(../../image/tiaofu.png);
   .container{
     height:105px;
-    background-color: #fff;
+    background-color: @white_color;
     p{
       margin: 0 40px;
       height:105px;
       line-height: 105px;
       font-size: 18px;
-      border-bottom:1px solid #f2f2f2;
+      border-bottom:1px solid @gray_color;
     }
   }
 }

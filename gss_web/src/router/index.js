@@ -14,7 +14,8 @@ const service = r => require.ensure([], () => r(require('../page/service/index.v
 Vue.use(Router)
 
 export default new Router({
-	mode:'history',
+
+  mode:'history',
   routes: [{
     path: '/',
     component: App,
