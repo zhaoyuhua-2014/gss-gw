@@ -43,6 +43,7 @@
 </script>
 
 <style lang="less" scoped>
+@import '../../style/mixin';
 .carousel-inner{
   img{
     width:100%;
@@ -63,7 +64,7 @@
     width: 10px;
     height: 10px;
     margin-left: 40px;
-    border: 2px solid #f8b62c;
+    border: 2px solid @theme_color;
   }
 }
 @keyframes mymove

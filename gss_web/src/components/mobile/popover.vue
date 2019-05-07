@@ -39,6 +39,7 @@
 </script>
 
 <style lang="less" scoped>
+@import '../../style/mixin';
 .Mpopover{
   overflow-y: scroll;
   position:fixed;
@@ -52,14 +53,14 @@
   height:85%;
   z-index: 162;
   border-radius: 16px;
-  background-color: #fff;
+  background-color: @white_color;
   .name{
     position:fixed;
     padding-top: 10px;
     width: 80%;
     font-size: 19px;
     height: 48px;
-    background-color: #fff;
+    background-color: @white_color;
   }
   .part{
     margin: 60px 0 20px;
@@ -71,7 +72,7 @@
         width: 3px;
         height: 19px;
         vertical-align:top;
-        background-color: #f8b62c;
+        background-color: @theme_color;
       }
     }
     p{

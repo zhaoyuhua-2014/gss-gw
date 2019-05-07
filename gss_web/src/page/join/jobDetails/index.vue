@@ -138,21 +138,18 @@ let jsonData = [{
 </script>
 
 <style lang="less">
+@import '../../../style/mixin';
   .job_details{
     .li_join{
-      background-color: #ffc82f;
-      color: #fff;
-      &:hover{
-        color:#fff !important;
-      }
+     .pcLi
     }
     .details_area{
       margin-top:90px;
       margin-bottom: 60px;
       .breadcrumb{
         margin-bottom: 50px;
-        background-color: #fff;
-        border-bottom: 1px solid #f2f2f2;
+        background-color: @white_color;
+        border-bottom: 1px solid @gray_color;
         color: #555;
         li + li:before {
           color: #CCCCCC;
@@ -161,13 +158,13 @@ let jsonData = [{
         }
         li:hover{
           cursor: pointer;
-          color: #ffc82f;
+          color: @theme_color;
         }
       }
       .job_information{
-        border:1px solid #f2f2f2;
+        border:1px solid @gray_color;
         padding:30px;
-        font-size: 16px;
+        font-size: @font_size;
         background-color:#fafafa;
         line-height: 40px;
         .name{
@@ -188,7 +185,7 @@ let jsonData = [{
       .job_require{
         padding: 30px 30px 50px;
         margin-bottom: 50px;
-        border:1px solid #f2f2f2;
+        border:1px solid @gray_color;
         .require{
           li + li{
             margin-left: 38px;
@@ -238,7 +235,7 @@ let jsonData = [{
       .company_logo{
         padding: 30px 0;
         text-align: center;
-        border: 1px solid #f2f2f2;
+        border: 1px solid @gray_color;
         p{
           margin: 15px 0;
           line-height: 40px;
@@ -255,7 +252,7 @@ let jsonData = [{
       .other{
         margin-top: 20px;
         padding:20px;
-        border: 1px solid #f2f2f2;
+        border: 1px solid @gray_color;
         .other_title{
           font-size: 20px;
           margin-bottom:10px;
@@ -282,7 +279,7 @@ let jsonData = [{
         p:last-child{
           text-align: right;
           line-height: 30px;
-          border-top:1px solid #f2f2f2;
+          border-top:1px solid @gray_color;
           &:hover{
             color: #f7b52b;
             cursor: pointer;
@@ -309,7 +306,7 @@ let jsonData = [{
         text-align: center;
         line-height: 80px;
         color: #555;
-        background-color: #f2f2f2
+        background-color: @gray_color
       }
     }
   }

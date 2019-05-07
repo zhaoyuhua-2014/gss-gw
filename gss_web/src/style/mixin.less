@@ -1,0 +1,19 @@
+@theme_color:#ffc82f;
+@white_color:#fff;
+@gray_color:#f2f2f2;
+@font_size:16px; // 字体大小
+
+
+.ellipsis {
+  overflow:hidden; //超出的文本隐藏
+  text-overflow:ellipsis; //溢出用省略号显示
+  white-space:nowrap; //溢出不换行
+}
+
+.pcLi {
+  background-color: @theme_color;
+  color: @white_color;
+  &:hover{
+    color:@white_color !important;
+  }
+}

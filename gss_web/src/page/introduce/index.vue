@@ -158,14 +158,11 @@ let brandData = [
 </script>
 
 <style lang="less">
+@import '../../style/mixin';
 // pc样式
 .pc_introduce{
   .li_introduce{
-    background-color: #ffc82f;
-    color: #fff;
-    &:hover{
-      color:#fff !important;
-    }
+    .pcLi
   }
   .title{
     img{
@@ -190,7 +187,7 @@ let brandData = [
         margin-right:30px;
       }
       p{
-        font-size:16px;
+        font-size:@font_size;
         text-indent: 22px;
         line-height: 28px;
       }
@@ -214,12 +211,12 @@ let brandData = [
           display: inline-block;
           vertical-align: middle;
           line-height:30px;
-          font-size:16px;
+          font-size:@font_size;
           font-weight: 100;
         }
         .year{
           width:60px;
-          color: #ffc82f;
+          color: @theme_color;
         }
         .month{
           width:40px;
@@ -253,7 +250,7 @@ let brandData = [
           text-align: center;
           line-height: 46px;
           color: white;
-          background-color: #ffc82f;
+          background-color: @theme_color;
         }
         dd{
           font-size: 20px;
@@ -271,12 +268,12 @@ let brandData = [
 // mobile 样式
 .mobile_introduce{
   .li_introduce{
-    color: #ffc82f;
+    color: @theme_color;
   }
   .title{
     margin-bottom: 10px;
     text-align: left;
-    font-size: 16px;
+    font-size: @font_size;
     img{
       width: 26px;
     }
@@ -307,7 +304,7 @@ let brandData = [
           width:112px;
           height:38px;
           line-height: 38px;
-          font-size: 16px;
+          font-size: @font_size;
           font-weight: 100;
           text-indent: 20px;
           background:url(../../image/mobile/gsjj_arrow.png)  no-repeat  left/cover;
@@ -350,10 +347,9 @@ let brandData = [
           margin: auto;
           width: 50%;
           height:32px;
-          background-color: #f8b62c;
-          font-size: 16px;
-          color: #fff;
-
+          background-color: @theme_color;
+          font-size: @font_size;
+          color: @white_color;
           line-height: 32px;
         }
         dd{
@@ -368,10 +364,8 @@ let brandData = [
       }
     }
     .content_four{
-      img{
-        margin-bottom:20px;
-      }
       p{
+        margin-top:10px;
         text-align: left;
         text-indent: 26px;
         font-size: 13px;

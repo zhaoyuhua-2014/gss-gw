@@ -359,14 +359,11 @@ import { close } from 'fs';
 </script>
 
 <style lang="less">
+@import '../../style/mixin';
 // pc 样式
   .pc_join{
     .li_join{
-      background-color: #ffc82f;
-      color: #fff;
-      &:hover{
-        color:#fff !important;
-      }
+      .pcLi
     }
     .join_area{
       margin-top: 80px;
@@ -406,8 +403,8 @@ import { close } from 'fs';
         }
         .col-md-2{
           .active{
-            background-color: #f8b62c;
-            color: #fff;
+            background-color: @theme_color;
+            color: @white_color;
           }
         }
         .problem{
@@ -439,14 +436,14 @@ import { close } from 'fs';
       }
     }
     .td_hover:hover{
-      color:#f8b62c;
+      color:@theme_color;
       cursor: pointer;
     }
   }
 // mobile 样式
   .mobile_join{
     .li_join{
-      color:#ffc82f;
+      color:@theme_color;
     }
     .content{
       .part_one{
@@ -491,7 +488,7 @@ import { close } from 'fs';
             width:50%;
             border-radius: 8px;
             background-color: #fc6b7c;
-            color: #fff;
+            color: @white_color;
             text-align: center;
           }
         }
@@ -502,7 +499,7 @@ import { close } from 'fs';
             height:32px;
             text-align: center;
             line-height:32px;
-            font-size: 16px;
+            font-size: @font_size;
             background:url(../../image/jrwm.png) no-repeat center center;
             background-size: 98px 32px;
           }
