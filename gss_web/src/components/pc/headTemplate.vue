@@ -1,7 +1,7 @@
 <template>
   <div class="head_template">
     <div class="container">
-        <p>{{title}}</p>
+        <p>{{title[0]}}<span>{{title[1]}}</span></p>
     </div>
   </div>
 </template>
@@ -12,7 +12,6 @@
     props: ["title"],
     data() {
       return {
-
       }
     },
   }
@@ -35,6 +34,9 @@
       line-height: 105px;
       font-size: 18px;
       border-bottom:1px solid @gray_color;
+      span{
+        color: #777;
+      }
     }
   }
 }

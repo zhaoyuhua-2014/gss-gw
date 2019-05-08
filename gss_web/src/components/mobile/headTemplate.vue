@@ -1,6 +1,6 @@
 <template>
   <div class="head_template">
-      <p>{{title}}</p>
+      <p>{{title[0]}}<span>{{title[1]}}</span></p>
   </div>
 </template>
 
@@ -25,6 +25,9 @@
   p{
     border-bottom: 1px solid @gray_color;
     letter-spacing: 1px;
+    span{
+      color: #777;
+    }
   }
 }
 </style>

@@ -37,7 +37,7 @@
       <div class="content">
         <div class="part_one clearfix">
           <dl class="pull-left" v-for="(item,index) in cooperationData" :key="index">
-            <dt><img :src="item.img" alt="" width="168px"></dt>
+            <dt><img :src="item.img" alt="" width="97%"></dt>
             <dd>
               <p>{{item.name}}</p>
               <p>{{item.text}}</p>
@@ -78,7 +78,7 @@ import MheadTemplate from "../../components/mobile/headTemplate.vue";
     name:'cooperation',
     data() {
       return {
-        title:'合作商家 /Business cooperation',
+        title:{0:'合作商家' ,1:'/Business cooperation'},
         cooperationData:cooperationData,
         wayData:wayData
       }
@@ -113,7 +113,7 @@ let wayData=[
 // pc 样式
   .pc_cooperation{
     .li_cooperation{
-     .pcLi;
+     .pcNav;
     }
     .cooperation_area{
       margin-top:60px;
@@ -127,8 +127,11 @@ let wayData=[
           border:1px solid @gray_color;
           text-align: center;
           dd{
-            background-color: @theme_color;
+            background-color:@btn_color;
             color: @white_color;
+            p{
+              margin:0;
+            }
             p:first-child{
               font-size: 18px;
               line-height: 50px;
@@ -175,7 +178,7 @@ let wayData=[
   // mobile 样式
   .mobile_cooperation{
     .li_cooperation{
-      color: @theme_color;
+      color: @btn_color;
     }
     .part_one{
       padding:32px 2%  0;

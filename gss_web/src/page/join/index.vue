@@ -86,7 +86,7 @@
           <div class="problem">
             <div class="p_title">招聘流程</div>
             <ul class="clearfix">
-              <li class="pull-left" v-for="(item,index) in imgData" :key="index"><img :src="item.img" alt="" width="54px"></li>
+              <li class="pull-left" v-for="(item,index) in imgData" :key="index"><img :src="item.Mimg" alt="" ></li>
             </ul>
            <div class="p_title">公司福利</div>
            <p>果速送处于快速发展期，公司提供有竞争力的薪酬待遇。缴纳五险一金，节日福利和集体旅游等；包括伙食补贴、防暑降温补贴、生日礼物、免费水果茶点等。我们经常举办很多集体活动，如先进集体旅游、行业间参观访问等。</p>
@@ -118,7 +118,7 @@ import { close } from 'fs';
     data() {
       return {
         tab:0,
-        title:"加入我们 /Join us",
+        title:{0:"加入我们", 1:"/Join us"},
         data:data,
         thData:thData,
         imgData:imgData,
@@ -363,7 +363,7 @@ import { close } from 'fs';
 // pc 样式
   .pc_join{
     .li_join{
-      .pcLi
+      .pcNav
     }
     .join_area{
       margin-top: 80px;
@@ -403,7 +403,7 @@ import { close } from 'fs';
         }
         .col-md-2{
           .active{
-            background-color: @theme_color;
+            background-color: @btn_color;
             color: @white_color;
           }
         }
@@ -436,14 +436,14 @@ import { close } from 'fs';
       }
     }
     .td_hover:hover{
-      color:@theme_color;
+      color:@btn_color;
       cursor: pointer;
     }
   }
 // mobile 样式
   .mobile_join{
     .li_join{
-      color:@theme_color;
+      color:@btn_color;
     }
     .content{
       .part_one{
@@ -514,6 +514,16 @@ import { close } from 'fs';
             font-size: 14px;
             line-height: 24px;
           }
+        }
+        .clearfix{
+          li{
+            width: 16%;
+            img{
+              width: 100%;
+            }
+          }
+
+
         }
       }
     }

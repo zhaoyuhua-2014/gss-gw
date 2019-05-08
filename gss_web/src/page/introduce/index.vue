@@ -66,11 +66,11 @@
           <dl  v-for="(item,index) in developmentData " :key="index" >
             <dt class="year" v-show="item.myear != ''">{{item.myear}}</dt>
             <dd class="clearfix">
-              <div class="pull-left" >
-                <span class="month">{{item.month}}</span>
-                <img src="../../image/gsjs-circle.png" alt="" width="16px">
+              <span class="month pull-left">{{item.month}}</span>
+              <div class="pull-left clearfix" >
+                <img class="pull-left" src="../../image/gsjs-circle.png" alt="" width="16px">
+                <p class="pull-left">{{item.des}}</p>
               </div>
-              <p class="pull-left">{{item.des}}</p>
             </dd>
           </dl>
         </div>
@@ -109,7 +109,7 @@ import MheadTemplate from "../../components/mobile/headTemplate.vue";
     name:'introduce',
     data() {
       return {
-          title:'公司介绍 /Company introduction',
+          title:{0:'公司介绍 ',1:'/Company introduction'},
           developmentData:developmentData,
           brandData:brandData
       }
@@ -162,7 +162,7 @@ let brandData = [
 // pc样式
 .pc_introduce{
   .li_introduce{
-    .pcLi
+    .pcNav
   }
   .title{
     img{
@@ -206,6 +206,7 @@ let brandData = [
         position: relative;
         height: 86px;
         font-size: 0;
+        margin:0;
         span,
         dd{
           display: inline-block;
@@ -268,7 +269,7 @@ let brandData = [
 // mobile 样式
 .mobile_introduce{
   .li_introduce{
-    color: @theme_color;
+    color: @btn_color;
   }
   .title{
     margin-bottom: 10px;
@@ -298,7 +299,7 @@ let brandData = [
       font-size: 12px;
       text-align: left;
       dl{
-        position: relative;
+        margin:0;
         dt{
           margin-bottom: 16px;
           width:112px;
@@ -310,35 +311,39 @@ let brandData = [
           background:url(../../image/mobile/gsjj_arrow.png)  no-repeat  left/cover;
         }
         dd{
+          span{
+            display: inline-block;
+            width:10%;
+          }
           div{
-            width:18%;
-            img{
-              margin:0 6px;
-            }
-          }
-          p{
             position: relative;
-            width:82%;
-            height: 70px;
-          }
-          p:after{
-            content: "";
-            position:absolute;
-            top:20%;
-            left: -7%;
-            width: 2px;
-            height:100%;
-            background:url(../../image/gsjs_shu.png) no-repeat center/cover;
+            width:90%;
+            height:86px;
+            p{
+              margin-left:8px;
+              width:90%;
+              line-height: 22px;
+            }
+            &:after{
+              content: "";
+              position:absolute;
+              top:15px;
+              left:7px;
+              width: 2px;
+              height:82%;
+              background:url(../../image/gsjs_shu.png) no-repeat center/cover;
+            }
           }
         }
       }
-      dl:last-child p:after{
+      dl:last-child div:after{
         content: "";
         background:none;
       }
     }
     .content_three{
       dl{
+        margin:0;
         padding:10px 18px ;
         width: 48%;
         background-color: #fef8ea;
@@ -359,7 +364,7 @@ let brandData = [
         }
       }
       dl:nth-child(even){
-        margin-left:13px;
+        margin-left:10px;
         margin-bottom: 16px;
       }
     }

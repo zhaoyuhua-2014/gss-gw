@@ -144,7 +144,7 @@ let data = [
   // pc端样式
   .pc_home{
     .li_home{
-     .pcLi
+     .pcNav
     }
     .display_area{
       .area_first{
@@ -241,7 +241,7 @@ let data = [
   // mobile 端样式
   .mobile_home{
     .li_home{
-      color: @theme_color;
+      color: @btn_color;
     }
     .mobile_content{
       margin-top:56px;
@@ -295,9 +295,14 @@ let data = [
         span{
           color: @theme_color;
         }
+        p:nth-child(1){
+          height: 32px;
+          line-height: 32px;
+          font-size:18px;
+        }
         p{
           margin: 0 auto;
-          width:76%;
+          width:90%;
           font-size: 13px;
           line-height: 20px;
         }
@@ -309,7 +314,8 @@ let data = [
         margin:20px auto 0;
         width:94%;
         dd{
-          width:80%;
+          margin-left: 6px;
+          width:74%;
           font-size: 12px;
           text-align: left;
           line-height: 20px;

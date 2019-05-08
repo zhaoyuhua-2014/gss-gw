@@ -53,6 +53,9 @@ export default {
       margin-bottom: 0;
       background-color: #dbdbdb;
       opacity: 0.8;
+      ul{
+        margin: 0;
+      }
     }
     .nav_img{
       margin-top: 18px;
@@ -73,7 +76,7 @@ export default {
     font-weight: bold;
     cursor: pointer;
     &:hover{
-       color:@theme_color;
+       color:@btn_color;
     }
   }
 </style>

@@ -13,7 +13,7 @@
                 <img src="../../image/app_right1.png" alt=""> <span>果速送APP下载</span>
               </div>
               <div class="row" v-for="(item,index) in downloadData " :key="index">
-                <div class="col-md-3"><img class="code" :src="item.img" alt=""></div>
+                <div class="col-md-4"><img class="code" :src="item.img" alt=""></div>
                 <div class="col-md-5">
                   <p>{{item.text}}</p>
                   <p>{{item.des}}</p>
@@ -41,9 +41,9 @@
           <img src="../../image/app_right1.png" alt="" width="64px">
           <span>果速送APP下载</span>
         </div>
-        <div class="clearfix" v-for="(item,index) in downloadData " :key="index">
-          <div class="pull-left"><img class="code" :src="item.img" alt="" width="80px"></div>
-          <div class="pull-left">
+        <div class="phone_client" v-for="(item,index) in downloadData " :key="index">
+          <div  class="phone_code"><img  :src="item.img" alt="" width="80px"></div>
+          <div class="phone_text">
             <p>{{item.text}}</p>
             <p>{{item.des}}</p>
           </div>
@@ -75,7 +75,7 @@ import MheadTemplate from "../../components/mobile/headTemplate.vue";
     name:'download',
     data() {
       return {
-      title:'APP下载 /App download',
+      title:{0:'APP下载',1:'/App download'},
       downloadData:downloadData
 
       }
@@ -101,7 +101,7 @@ let downloadData = [
 // pc 样式
   .pc_download{
     .li_download{
-      .pcLi;
+      .pcNav;
     }
     .download_area{
       margin-top:80px;
@@ -153,21 +153,25 @@ let downloadData = [
   // mobile 样式
   .mobile_download{
     .li_download{
-      color: @theme_color;
+      color: @btn_color;
     }
     .content{
       .part_one,
-      .clearfix{
+      .phone_client{
         margin:32px auto 0;
-        width:50%;
+        width:60%;
+        text-align: center;
       }
-      .clearfix{
-        p{
-          line-height: 30px;
+      .phone_client{
+        .phone_code,
+        .phone_text{
+          display: inline-block;
+          vertical-align: middle;
         }
-        p:first-child{
-          margin-top:10px;
-          margin-left: 2px;
+        p{
+          width:108px;
+          line-height: 32px;
+          text-align: left;
         }
       }
       .app_img{

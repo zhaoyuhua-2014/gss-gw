@@ -61,7 +61,7 @@ import MheadTemplate from "../../components/mobile/headTemplate.vue";
     name:'service',
     data() {
       return {
-        title:'服务保障 /Service assurance',
+        title:{0:'服务保障',1:'/Service assurance'},
         data:data,
       }
     },
@@ -88,7 +88,7 @@ let data = [
 // pc 样式
   .pc_service{
     .li_service{
-     .pcLi
+     .pcNav
     }
     .progress_display{
       margin-top: 50px;
@@ -134,7 +134,7 @@ let data = [
   // mobile样式
   .mobile_service{
     .li_service{
-      color:  @theme_color;
+      color: @btn_color;
     }
     .title{
       width: 100%;
