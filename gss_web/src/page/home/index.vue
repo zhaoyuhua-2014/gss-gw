@@ -52,7 +52,7 @@
     <div class="mobile_home  hidden-md hidden-lg">
       <MheaderNav></MheaderNav>
       <div class="mobile_content">
-        <img src="../../image/mobile/bg1.png" class="logo" alt="">
+        <div><img src="../../image/mobile/bg1.png" class="logo" alt=""></div>
         <img src="../../image/mobile/bg2.png" class="word" alt="">
         <p class="text">
           果速送是一家一站式水果采购配送的服务平
