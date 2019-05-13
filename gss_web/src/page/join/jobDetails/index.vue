@@ -5,7 +5,7 @@
       <ul class="breadcrumb">
           <router-link :to="'home'" tag="li">首页</router-link>
           <router-link :to="'join'" tag="li">加入我们</router-link>
-          <li class="active">十一月</li>
+          <li class="active">{{data.name}}</li>
       </ul>
       <div class="row">
         <div class="col-md-9">
@@ -141,7 +141,7 @@ let jsonData = [{
 @import '../../../style/mixin';
   .job_details{
     .li_join{
-     .pcLi
+     .pcNav
     }
     .details_area{
       margin-top:90px;

@@ -19,11 +19,14 @@
 <style lang="less" scoped>
 .m_footer{
   margin-top: 20px;
-  padding: 16px 0;
+  padding: 20px 0 10px;
   width: 100%;
-  line-height: 30px;
-  font-size:14px;
+  line-height: 22px;
+  font-size:12px;
   text-align: center;
   background-color: #f6f6f6;
+  p{
+    margin: 0;
+  }
 }
 </style>
