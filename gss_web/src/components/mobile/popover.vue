@@ -46,14 +46,18 @@
   top:0;
   left:0;
   right:0;
-  bottom: 0;
-  margin:70px auto 0;
+  bottom:0;
+  margin:70px auto;
   padding:0 30px;
   width: 90%;
-  height:85%;
   z-index: 162;
   border-radius: 16px;
   background-color: @white_color;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+  &::-webkit-scrollbar{
+    width: 0 !important
+  }
   .name{
     position:fixed;
     padding-top: 10px;

@@ -71,7 +71,7 @@
         </div>
         <dl class="part_two">
           <dt>联系方式：</dt>
-          <dd>电话：<span class="color_gray">0571-87003816</span></dd>
+          <dd>电话：<a href="tel:0571-87003816"><span class="color_gray">0571-87003816</span></a></dd>
           <dd>传真：<span class="color_gray">0571-87003818</span></dd>
           <dd>Email：<span class="color_red">zs-info@info.cn</span></dd>
           <dd><a class="color_red" href="http://www.zs-info.cn">http://www.zs-info.cn</a></dd>
@@ -112,7 +112,7 @@ import MheaderNav from "../../components/mobile/nav.vue";
 import Mfooter from "../../components/mobile/footer.vue";
 import MheadTemplate from "../../components/mobile/headTemplate.vue";
 import Mpopover from "../../components/mobile/popover.vue";
-import { close } from 'fs';
+import { close, constants } from 'fs';
   export default {
     name:'join',
     data() {
@@ -285,17 +285,25 @@ import { close } from 'fs';
       });
       marker3.setMap(map3);
     },
+
     methods:{
       joinDetail(index){
-        // let routerJump =
          this.$router.push({path:'/jobDetails',query:{index:index}})
-        // window.open(routerJump.href,'_blank')
       },
       occupation(index){
         this.occupationData = jsonData[index]
+        $("body").css({overflow:"hidden"});
+        this.$nextTick(function () {
+          let parentHeight =  $('.Mpopover').height();
+          let childHeight = $('.Mpopover .part').height()
+          if(parentHeight >  childHeight){
+            $('.Mpopover ').css("bottom","auto")
+          }
+        })
       },
       close(){
         this.occupationData = null;
+        $("body").css({overflow:"auto"});
       }
     }
   }

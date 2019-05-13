@@ -318,7 +318,7 @@ let brandData = [
           div{
             position: relative;
             width:90%;
-            height:86px;
+            height:108px;
             p{
               margin-left:8px;
               width:90%;
@@ -330,7 +330,7 @@ let brandData = [
               top:15px;
               left:7px;
               width: 2px;
-              height:82%;
+              height:88%;
               background:url(../../image/gsjs_shu.png) no-repeat center/cover;
             }
           }

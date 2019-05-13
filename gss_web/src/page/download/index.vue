@@ -159,7 +159,7 @@ let downloadData = [
       .part_one,
       .phone_client{
         margin:32px auto 0;
-        width:60%;
+        width:62%;
         text-align: center;
       }
       .phone_client{

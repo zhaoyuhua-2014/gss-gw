@@ -1,7 +1,7 @@
 <template>
   <div class="navbar-fixed-top mobile_nav" >
     <div class="nav clearfix">
-      <img src="../../image/title.png" class="pull-left" alt="">
+      <img src="../../image/title.png" class="pull-left" alt="" @click="toHome">
       <img src="../../image/mobile/btn.png"  class="pull-right"   alt="" @click="collapse" >
     </div>
     <ul class="navCollapse">
@@ -14,17 +14,31 @@
   export default {
     data() {
       return {
-        data:data
+        data:data,
+        isClose:false
       }
     },
     methods:{
       collapse(){
-        $('.navCollapse').animate({height:'800px'})
+        if(this.isClose){
+           this.isClose = false;
+          $('.navCollapse').animate({height:'0px'})
+        }else{
+          this.isClose = true;
+          let navHeight = $(window).height();
+          $('.navCollapse').animate({height:navHeight})
+        }
+
       },
       closeCollapse(router){
         let data = '/'+router;
         this.$router.push({path:data})
         $('.navCollapse').animate({height:'0px'})
+        $("body").css({overflow:"auto"});
+      },
+      toHome(){
+        this.$router.push({path:'/home'})
+        $("body").css({overflow:"auto"});
       }
     }
   }
