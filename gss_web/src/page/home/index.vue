@@ -108,6 +108,7 @@ import banner from "../../components/pc/banner.vue";
 //mobile
 import MheaderNav from "../../components/mobile/nav.vue";
 import Mfooter from "../../components/mobile/footer.vue";
+import { constants } from 'fs';
   export default {
     name:'home',
     data() {
@@ -125,7 +126,7 @@ import Mfooter from "../../components/mobile/footer.vue";
     methods:{
       animate(){
         var id="content_area";
-        $("html,body").animate({scrollTop: $("div#"+id).offset().top}, 500);
+        $("html,body").animate({scrollTop: $("div#"+id).offset().top - 70}, 500);
       }
     }
   }
