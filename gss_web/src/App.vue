@@ -11,7 +11,10 @@ export default {
 </script>
 
 <style>
-
+html, body{
+  height: 100%;
+  overflow: auto;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

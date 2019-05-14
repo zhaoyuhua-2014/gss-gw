@@ -92,6 +92,7 @@ import MheadTemplate from "../../components/mobile/headTemplate.vue";
       MheadTemplate
     },
   }
+// 合作商家 数据
 let cooperationData =[
   {img:"../../static/image/hzsj_grh.png",name:"果然好",text:"专注水果，领鲜生活"},
   {img:"../../static/image/hzsj_gdm.png",name:"果多美",text:"我们只卖好吃的水果"},
@@ -102,6 +103,7 @@ let cooperationData =[
   {img:"../../static/image/hzsj_sgjc.png",name:"水果剧场",text:"多彩水果，演绎健康快乐"},
   {img:"../../static/image/hzsj_xgh.png",name:"鲜果汇",text:"新鲜水果，自然健康"},
 ]
+//合作 方式 数据
 let wayData=[
   {img:"../../static/image/hzsj_left.png",title:"成为我们的商家",text:"如果您是水果店老板，欢迎下载果速送APP申请服务，希望能成为您满意的服务平台。",jumprouter:"download",jumpText:'跳转至APP下载'},
   {img:"../../static/image/hzsj_right.png",title:"成为我们的供应商",text:"如果您是果农或者优质的水果供应商，期待您的来电，与您合作是我们莫大的荣幸。",telephoneNumber:"../../static/image/tel.png"}

@@ -47,7 +47,8 @@
   left:0;
   right:0;
   bottom:0;
-  margin:70px auto;
+  margin: auto ;
+  height: 76%;
   padding:0 30px;
   width: 90%;
   z-index: 162;

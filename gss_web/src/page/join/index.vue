@@ -45,9 +45,9 @@
                       </dl>
                     </div>
                     <div class="step">公司福利</div>
-                    <p>果速送处于快速发展期，公司提供有竞争力的薪酬待遇。缴纳五险一金，节日福利和集体旅游等；包括伙食补贴、防暑降温补贴、生日礼物、免费水果茶点等。我们经常举办很多集体活动，如先进集体旅游、行业间参观访问等。</p>
+                    <p>{{companyData.welfare}}</p>
                     <div class="step">工作地点</div>
-                    <p>公司总部位于浙江省杭州市滨江区滨安路1180号华业大厦2308-2313室，杭州站仓储点位于杭州市余杭区良渚街道 （勾庄） 博园西路7号酩创园一楼B01，南京站仓储点位于南京市江宁区东山街道润发路330号，宁波站仓储点位于宁波市鄞州区金辉东路18号3号门。果速送会依据岗位需求，合理安排就职地点。</p>
+                    <p>{{companyData.address}}</p>
                   </div>
                 </div>
               </div>
@@ -60,21 +60,21 @@
       <MheadTemplate :title="title"></MheadTemplate>
       <div class="content">
         <div class="part_one">
-          <p>总部：浙江省杭州市滨江区滨安路1180号华业大厦2308-2313室</p>
-          <div id="mapContainer"></div>
-          <p>杭州站：余杭区良渚街道 （勾庄） 博园西路7号酩创园一楼B01</p>
-          <div id="mapContainer1"></div>
-          <p>南京站：南京市江宁区东山街道润发路330号</p>
-          <div id="mapContainer2"></div>
-          <P>宁波站：宁波市鄞州区金辉东路18号3号门</P>
-          <div id="mapContainer3"></div>
+          <p>{{companyData.siteAddress}}</p>
+          <div id="mapContainer" class="container"></div>
+          <p>{{companyData.siteAddress1}}</p>
+          <div id="mapContainer1" class="container"></div>
+          <p>{{companyData.siteAddress2}}</p>
+          <div id="mapContainer2" class="container"></div>
+          <P>{{companyData.siteAddress3}}</P>
+          <div id="mapContainer3" class="container"></div>
         </div>
         <dl class="part_two">
           <dt>联系方式：</dt>
-          <dd>电话：<a href="tel:0571-87003816"><span class="color_gray">0571-87003816</span></a></dd>
-          <dd>传真：<span class="color_gray">0571-87003818</span></dd>
-          <dd>Email：<span class="color_red">zs-info@info.cn</span></dd>
-          <dd><a class="color_red" href="http://www.zs-info.cn">http://www.zs-info.cn</a></dd>
+          <dd>电话：<a :href="'tel:'+ companyData.telephone"><span class="color_gray">{{companyData.telephone}}</span></a></dd>
+          <dd>传真：<span class="color_gray">{{companyData.fax}}</span></dd>
+          <dd>Email：<span class="color_red">{{companyData.email}}</span></dd>
+          <dd><a class="color_red" :href="companyData.web">{{companyData.web}}</a></dd>
         </dl>
         <p class="extra_area">加入我们</p>
         <div class="part_three">
@@ -89,9 +89,9 @@
               <li class="pull-left" v-for="(item,index) in imgData" :key="index"><img :src="item.Mimg" alt="" ></li>
             </ul>
            <div class="p_title">公司福利</div>
-           <p>果速送处于快速发展期，公司提供有竞争力的薪酬待遇。缴纳五险一金，节日福利和集体旅游等；包括伙食补贴、防暑降温补贴、生日礼物、免费水果茶点等。我们经常举办很多集体活动，如先进集体旅游、行业间参观访问等。</p>
+           <p>{{companyData.welfare}}</p>
            <div class="p_title">公司地址</div>
-           <p>公司总部位于浙江省杭州市滨江区滨安路1180号华业大厦2308-2313室，杭州站仓储点位于杭州市余杭区良渚街道 （勾庄） 博园西路7号酩创园一楼B01，南京站仓储点位于南京市江宁区东山街道润发路330号，宁波站仓储点位于宁波市鄞州区金辉东路18号3号门。果速送会依据岗位需求，合理安排就职地点。</p>
+           <p>{{companyData.address}}</p>
           </div>
         </div>
       </div>
@@ -122,6 +122,7 @@ import { close, constants } from 'fs';
         data:data,
         thData:thData,
         imgData:imgData,
+        companyData:companyData,
         occupationData:null
       }
     },
@@ -135,6 +136,7 @@ import { close, constants } from 'fs';
       Mpopover
     },
     mounted(){
+      //pc
       let  mapBig  = new AMap.Map('map_big',{
         resizeEnable:true,
         zoom:17,
@@ -178,6 +180,7 @@ import { close, constants } from 'fs';
             openInfoWinBig();
         });
         openInfoWinBig();
+
 
         let markerOne = new AMap.Marker({
             map: mapOne,
@@ -244,7 +247,7 @@ import { close, constants } from 'fs';
         openInfoWinThree();
       });
 
-
+      //mobile
       let map = new AMap.Map('mapContainer',{
         resizeEnable:true,
         zoom:16,
@@ -284,6 +287,28 @@ import { close, constants } from 'fs';
           position: [121.6171900000,29.8218800000]
       });
       marker3.setMap(map3);
+
+      AMap.plugin([
+        'AMap.ToolBar',
+      ], function(){
+          // 在图面添加工具条控件，工具条控件集成了缩放、平移、定位等功能按钮在内的组合控件
+          map.addControl(new AMap.ToolBar({
+              // 简易缩放模式，默认为 false
+              liteStyle: true
+          }));
+          map1.addControl(new AMap.ToolBar({
+              // 简易缩放模式，默认为 false
+              liteStyle: true
+          }));
+          map2.addControl(new AMap.ToolBar({
+              // 简易缩放模式，默认为 false
+              liteStyle: true
+          }));
+          map3.addControl(new AMap.ToolBar({
+              // 简易缩放模式，默认为 false
+              liteStyle: true
+          }));
+      });
     },
 
     methods:{
@@ -293,13 +318,13 @@ import { close, constants } from 'fs';
       occupation(index){
         this.occupationData = jsonData[index]
         $("body").css({overflow:"hidden"});
-        this.$nextTick(function () {
-          let parentHeight =  $('.Mpopover').height();
-          let childHeight = $('.Mpopover .part').height()
-          if(parentHeight >  childHeight){
-            $('.Mpopover ').css("bottom","auto")
-          }
-        })
+        // this.$nextTick(function () {
+        //   let parentHeight =  $('.Mpopover').height();
+        //   let childHeight = $('.Mpopover .part').height()
+        //   if(parentHeight >  childHeight){
+        //     $('.Mpopover ').css("bottom","auto")
+        //   }
+        // })
       },
       close(){
         this.occupationData = null;
@@ -307,15 +332,18 @@ import { close, constants } from 'fs';
       }
     }
   }
+  //pc 表格标题
   let thData =[
     "职位名称","职位类别","工作地点","招聘人数","更新时间"
   ]
+  //pc 表格数据
   let data=[
     {name:'仓库管理员',typeText:'全职',address:'杭州-余杭区-勾庄',num:'5',time:'2018-06-07'},
  		{name:'数据分析',typeText:'全职',address:'杭州-滨江区',num:'5',time:'2018-06-07'},
  		{name:'客服专员',typeText:'全职',address:'杭州-余杭区-勾庄',num:'5',time:'2018-06-07'},
  		{name:'采购专员',typeText:'全职',address:'杭州-余杭区-勾庄',num:'5',time:'2018-06-07'}
   ]
+  // 招聘流程
   let imgData=[
     {img:"../../static/image/jrwm_lc1.png",text:'简历投递',Mimg:"../../static/image/lc1.png"},
     {img:"../../static/image/jrwm_lc2.png",text:'筛选简历',Mimg:"../../static/image/lc2.png"},
@@ -323,6 +351,7 @@ import { close, constants } from 'fs';
     {img:"../../static/image/jrwm_lc4.png",text:'发放offer',Mimg:"../../static/image/lc4.png"},
     {img:"../../static/image/jrwm_lc5.png",text:'办理入职',Mimg:"../../static/image/lc5.png"},
   ]
+  // 职位详情信息
   let jsonData = [{
   name:'仓库管理员',
   address:'杭州-余杭区-勾庄',
@@ -364,6 +393,19 @@ import { close, constants } from 'fs';
   jobDuties:' 1、水果采购工作。',
   jobRequirements:'1.高中以上学历，有水果采购工作经验优先考虑。<br/>2.责任心强， 人际沟通交往能力强，能独立开展工作，具备一定的承压能力。<br/>3.掌握水果品类的名称、规格、单价、产地。<br/>4.较强的谈判沟通能力，能与商家议价节约采购成本。'
 }];
+//公司福利 和 地址 mobile 信息
+let companyData ={
+    welfare:"果速送处于快速发展期，公司提供有竞争力的薪酬待遇。缴纳五险一金，节日福利和集体旅游等；包括伙食补贴、防暑降温补贴、生日礼物、免费水果茶点等。我们经常举办很多集体活动，如先进集体旅游、行业间参观访问等。",
+    address:"公司总部位于浙江省杭州市滨江区滨安路1180号华业大厦2308-2313室，杭州站仓储点位于杭州市余杭区良渚街道 （勾庄） 博园西路7号酩创园一楼B01，南京站仓储点位于南京市江宁区东山街道润发路330号，宁波站仓储点位于宁波市鄞州区金辉东路18号3号门。果速送会依据岗位需求，合理安排就职地点。",
+    siteAddress:"总部：浙江省杭州市滨江区滨安路1180号华业大厦2308-2313室",
+    siteAddress1:"杭州站：余杭区良渚街道 （勾庄） 博园西路7号酩创园一楼B01",
+    siteAddress2:"南京站：南京市江宁区东山街道润发路330号",
+    siteAddress3:"宁波站：宁波市鄞州区金辉东路18号3号门",
+    telephone:"0571-87003816",
+    fax:"0571-87003818",
+    email:"zs-info@info.cn",
+    web:"http://www.zs-info.cn"
+}
 </script>
 
 <style lang="less">
@@ -461,7 +503,7 @@ import { close, constants } from 'fs';
           margin-top: 24px;
           margin-bottom: 6px;
         }
-        div{
+        .container{
           width:100%;
           height: 200px;
         }
