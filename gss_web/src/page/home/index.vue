@@ -6,17 +6,15 @@
       <div class="display_area">
         <div class="area_first">
           <img src="../../image/index-09.png" alt="Fourth slide">
-          <div class="describe">
-            <p>果速送是专业的一站式水果采购配送S2B平台（www.guoss.cn），实现水果生鲜行业线上线下全程信息物联的移动互联网平台。果速送致力于推动中国水果农业产业链的优化和升级，重点整合全国优质的水果生产资源，为全国中小型水果零售终端提供优质安全的水果货源。最终打造成中国首家实现果农-零售商-消费者共赢互利的优质水果资源对接和物流配送的服务平台。</p>
-            <p>选择果速送，开店很轻松。期待与你一路前行......</p>
+          <div class="describe" v-html="wordDes.pcText">
           </div>
         </div>
         <div  class="area_second">
           <div class='container'>
             <div class="second_top">
-                <p>什么是一站式水果采购配送<span>服务平台</span></p>
-                <p>what is a one-stop fruit procurement and distribution service platform</p>
-                <img src="../../image/index-bg.png" alt="">
+                <p v-html="wordDes.comText"></p>
+                <p>{{wordDes.comText1}}</p>
+                <img :src="wordDes.line" alt="">
             </div>
             <div class="second_bottom row">
                 <dl class="col-md-6 clearfix" v-for="(item,index) in data" :key="index">
@@ -28,7 +26,11 @@
         </div>
         <div class="area_third container">
           <div class='step row'>
-            <dl class="col-md-3">
+            <dl class="col-md-3" v-for="(item,index) in progressData" :key="index">
+              <dt> <span :class="progressData.length  == index+1 && 'gray'"></span> <img v-show="item.img"  :src="item.img" alt=""></dt>
+              <dd>{{item.siteName}}</dd>
+            </dl>
+            <!-- <dl class="col-md-3">
               <dt><span></span></dt>
               <dd>杭州站</dd>
             </dl>
@@ -43,7 +45,7 @@
             <dl class="col-md-3">
               <dt> <span class="gray"></span> </dt>
               <dd>更多待开通...</dd>
-            </dl>
+            </dl> -->
           </div>
         </div>
       </div>
@@ -54,11 +56,7 @@
       <div class="mobile_content">
         <div><img src="../../image/mobile/bg1.png" class="logo" alt=""></div>
         <img src="../../image/mobile/bg2.png" class="word" alt="">
-        <p class="text">
-          果速送是一家一站式水果采购配送的服务平
-          台，目前业务已覆盖整个杭州、南京、宁波等地区,选择果速送，开店
-          很轻松。期待与你一路前行......
-        </p>
+        <p class="text">{{wordDes.mobileText}}</p>
         <router-link :to="'download'" tag="div">
           <img src="../../image/mobile/bg3.png" class="download" alt="" >
         </router-link>
@@ -66,9 +64,9 @@
       </div>
       <div id="content_area">
         <div class="area_first">
-          <p>什么是一站式水果采购配送<span>服务平台</span></p>
-          <p>what is a one-stop fruit procurement and distribution service platform</p>
-          <img src="../../image/index-bg.png" alt="">
+          <p v-html="wordDes.comText"></p>
+          <p>{{wordDes.comText1}}</p>
+          <img :src="wordDes.line" alt="">
         </div>
         <dl class="area_second clearfix" v-for="(item,index) in data" :key="index">
           <dt class="pull-left"><img :src="item.img"  alt="" width="70px"></dt>
@@ -76,7 +74,11 @@
         </dl>
          <div class="area_third">
           <div class='step clearfix'>
-            <dl class="pull-left">
+            <dl class="pull-left" v-for="(item,index) in progressData" :key="index">
+              <dt> <span :class="progressData.length  == index+1 && 'gray'"></span> <img v-show="item.img"  :src="item.img" alt=""></dt>
+              <dd>{{item.siteName}}</dd>
+            </dl>
+            <!-- <dl class="pull-left">
               <dt><span></span></dt>
               <dd>杭州站</dd>
             </dl>
@@ -91,7 +93,7 @@
             <dl class="pull-left">
               <dt> <span class="gray"></span> </dt>
               <dd>更多待开通...</dd>
-            </dl>
+            </dl> -->
           </div>
         </div>
         <Mfooter></Mfooter>
@@ -113,7 +115,9 @@ import { constants } from 'fs';
     name:'home',
     data() {
       return {
-        data:data
+        data:companyData,
+        wordDes:wordDes,
+        progressData:progressData
       }
     },
     components: {
@@ -130,13 +134,29 @@ import { constants } from 'fs';
       }
     }
   }
-let data = [
+// 公司描述数据
+let companyData = [
   {img:"../../static/image/index-sb1.png",isOdd:"0", text:"<span>开放的平台</span><br/>果速送是一个开放的平台，不管你是果园老板、<br/>采购供应商，还是水果店老板。<br/>这里都有属于你的位置，加入我们，携手共赢。",text1:"<span>开放的平台</span><br/>果速送是一个开放的平台，不管你是果园老板、采购供应商，还是水果店老板。这里都有属于你的位置，加入我们，携手共赢。"},
   {img:"../../static/image/index-sb2.png",isOdd:"1", text:"<span>专业的团队</span><br/>果速送拥有分工明确的专业团队，层层关卡，<br/>严格把关果速送平台运行的每一个环节，<br>共筑优质水果生态链。", text1:"<span>专业的团队</span><br/>果速送拥有分工明确的专业团队，层层关卡，严格把关果速送平台运行的每一个环节，共筑优质水果生态链。"},
   {img:"../../static/image/index-sb3.png",isOdd:"0", text:"<span>高质的货源</span><br/>果速送始终坚持果品的品质，<br/>严格把控水果供应源头，<br>从原产地，优质水果供应商中精挑细选，保质保价。",text1:"<span>高质的货源</span><br/>果速送始终坚持果品的品质，严格把控水果供应源头，从原产地，优质水果供应商中精挑细选，保质保价。"},
   {img:"../../static/image/index-sb4.png",isOdd:"1", text:"<span>丰富的品类</span><br/>果速送追求果品的丰富性，平台引进各类优质果品，<br/>时令水果、蔬菜干果、国产精品、<br>进口水果一应俱全。",text1:"<span>丰富的品类</span><br/>果速送追求果品的丰富性，平台引进各类优质果品，时令水果、蔬菜干果、国产精品、进口水果一应俱全。"},
   {img:"../../static/image/index-sb5.png",isOdd:"0", text:"<span>精细的运营</span><br/>果速送重视平台的精细运营，果品信息及时更新，<br/>与市场保持同步，推荐好果，<br>热卖促销，这里是离您最近的水果市场。",text1:"<span>精细的运营</span><br/>果速送重视平台的精细运营，果品信息及时更新，与市场保持同步，推荐好果，热卖促销，这里是离您最近的水果市场。"},
   {img:"../../static/image/index-sb6.png",isOdd:"1", text:'<span>优质的服务</span><br/>果速送是一个用心、贴心的服务平台，<br/>保障品质、专业配送、货到付款、退货无忧，<br>售后便捷，全方面为您服务。',text1:'<span>优质的服务</span><br/>果速送是一个用心、贴心的服务平台，保障品质、专业配送、货到付款、退货无忧，售后便捷，全方面为您服务。'},
+]
+// textdata
+let wordDes={
+  pcText:"<p>果速送是专业的一站式水果采购配送S2B平台（www.guoss.cn），实现水果生鲜行业线上线下全程信息物联的移动互联网平台。果速送致力于推动中国水果农业产业链的优化和升级，重点整合全国优质的水果生产资源，为全国中小型水果零售终端提供优质安全的水果货源。最终打造成中国首家实现果农-零售商-消费者共赢互利的优质水果资源对接和物流配送的服务平台。</p><p>选择果速送，开店很轻松。期待与你一路前行......</p>",
+  mobileText :" 果速送是一家一站式水果采购配送的服务平台，目前业务已覆盖整个杭州、南京、宁波等地区,选择果速送，开店很轻松。期待与你一路前行......",
+  comText:"什么是一站式水果采购配送<span>服务平台</span>",
+  comText1:"what is a one-stop fruit procurement and distribution service platform",
+  line:"../../static/image/index-bg.png",
+}
+// 进度数据
+let progressData =[
+  {siteName:'杭州',img:""},
+  {siteName:'南京',img:""},
+  {siteName:'宁波',img:"../../static/image/car.png"},
+  {siteName:'更多待开通...',img:""},
 ]
 </script>
 

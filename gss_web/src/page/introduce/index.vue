@@ -8,13 +8,13 @@
           <div class="brand_introduction row">
               <img class="col-md-4" src="../../image/gsjs_company.png" alt="">
               <div class="col-md-7">
-                <div class='title'><img src="../../image/gsjs_title.png" alt=""><span>品牌简介</span></div>
-                <p>“果速送”为杭州果速信息科技有限公司旗下品牌。品牌成立于2015年，是一个立足于高科技互联网技术，经营水果批发、配送于一体的全品类综合服务性品牌，打造了全国地区一站式水果采购配送的服务平台。</p>
-                <p>果速送平台致力于解决中小型水果店及有持续水果采购需求的餐饮店解决水果进货问题。我们严格把控水果把控源头，建立完善的配送体系，提供一站式采购配送服务，解决客户采购累、进价高等实质性问题。 </p>
+                <div class='title'><img :src="introduction.img" alt=""><span>品牌简介</span></div>
+                <p>{{introduction.text}}</p>
+                <p>{{introduction.text1}}</p>
               </div>
           </div>
           <div class="development_history">
-            <div class='title'><img src="../../image/gsjs_title.png" alt=""><span>发展历程</span></div>
+            <div class='title'><img :src="introduction.img" alt=""><span>发展历程</span></div>
             <div class="development">
               <dl v-for="(item,index) in developmentData " :key="index"  class="row">
                 <dt class="col-md-3">
@@ -30,7 +30,7 @@
             </div>
           </div>
           <div class="brand_concept">
-            <div class='title'><img src="../../image/gsjs_title.png" alt=""><span>品牌理念</span></div>
+            <div class='title'><img :src="introduction.img" alt=""><span>品牌理念</span></div>
             <div class="row">
               <dl class="col-md-3" v-for="(item,index) in brandData" :key="index">
                 <dt>{{item.title}}</dt>
@@ -41,10 +41,10 @@
           <div class="team_introduction row">
             <img class="col-md-4" src="../../image/gsjs_bottom.png" alt="">
             <div class="col-md-7">
-              <div class='title'><img src="../../image/gsjs_title.png" alt=""><span>团队介绍</span></div>
-              <p>公司拥有一支富有朝气的团队，我们的团队成员来自五湖四海，是综合性的专业团队。有互联网行业精英，有丰富果蔬经营经验的采购专员，有媒体从业人员，有优质的配送队伍。为了一个共同的梦想走到了一起。</p>
-              <p>我们虽然拥有不同的性格、教育背景和工作经历，但都有共同的一个特点：我们满怀理想，但又脚踏实地地去实现。</p>
-              <p>在这里，我们严格把关果速送平台运行的每一个环节，共筑优质水果生态链；我们优势互补，拥有无限广阔的施展空间；在这里，我们在一起，没有曲高和寡，只有相伴前行。</p>
+              <div class='title'><img :src="introduction.img" alt=""><span>团队介绍</span></div>
+              <p>{{introduce.text}}</p>
+              <p>{{introduce.text1}}</p>
+              <p>{{introduce.text2}}</p>
             </div>
           </div>
         </div>
@@ -57,12 +57,12 @@
       <div class="content">
         <img src="../../image/gsjs_company.png" alt="" width="226px">
         <div class="content_one">
-          <div class='title'><img src="../../image/gsjs_title.png" alt=""><span>品牌理念</span></div>
-          <p>“果速送”为杭州果速信息科技有限公司旗下品牌。品牌成立于2015年，是一个立足于高科技互联网技术，经营水果批发、配送于一体的全品类综合服务性品牌，打造了全国地区一站式水果采购配送的服务平台。</p>
-          <p>果速送平台致力于解决中小型水果店及有持续水果采购需求的餐饮店解决水果进货问题。我们严格把控水果把控源头，建立完善的配送体系，提供一站式采购配送服务，解决客户采购累、进价高等实质性问题。 </p>
+          <div class='title'><img :src="introduction.img" alt=""><span>品牌简介</span></div>
+          <p>{{introduction.text}}</p>
+          <p>{{introduction.text1}}</p>
         </div>
         <div class="content_two">
-          <div class='title'><img src="../../image/gsjs_title.png" alt=""><span>发展历程</span></div>
+          <div class='title'><img :src="introduction.img" alt=""><span>发展历程</span></div>
           <dl  v-for="(item,index) in developmentData " :key="index" >
             <dt class="year" v-show="item.myear != ''">{{item.myear}}</dt>
             <dd class="clearfix">
@@ -75,7 +75,7 @@
           </dl>
         </div>
         <div class="content_three">
-          <div class='title'><img src="../../image/gsjs_title.png" alt=""><span>品牌介绍</span></div>
+          <div class='title'><img :src="introduction.img" alt=""><span>品牌理念</span></div>
           <div class="clearfix">
             <dl v-for="(item,index) in brandData" :key="index" class="pull-left">
               <dt>{{item.title}}</dt>
@@ -84,11 +84,11 @@
           </div>
         </div>
         <div class="content_four">
-          <div class='title'><img src="../../image/gsjs_title.png" alt=""><span>团队介绍</span></div>
+          <div class='title'><img :src="introduction.img" alt=""><span>团队介绍</span></div>
           <img src="../../image/gsjs_bottom.png" width="226px" alt="">
-          <p>公司拥有一支富有朝气的团队，我们的团队成员来自五湖四海，是综合性的专业团队。有互联网行业精英，有丰富果蔬经营经验的采购专员，有媒体从业人员，有优质的配送队伍。为了一个共同的梦想走到了一起。</p>
-              <p>我们虽然拥有不同的性格、教育背景和工作经历，但都有共同的一个特点：我们满怀理想，但又脚踏实地地去实现。</p>
-              <p>在这里，我们严格把关果速送平台运行的每一个环节，共筑优质水果生态链；我们优势互补，拥有无限广阔的施展空间；在这里，我们在一起，没有曲高和寡，只有相伴前行。</p>
+          <p>{{introduce.text}}</p>
+          <p>{{introduce.text1}}</p>
+          <p>{{introduce.text2}}</p>
         </div>
       </div>
       <Mfooter></Mfooter>
@@ -111,7 +111,9 @@ import MheadTemplate from "../../components/mobile/headTemplate.vue";
       return {
           title:{0:'公司介绍 ',1:'/Company introduction'},
           developmentData:developmentData,
-          brandData:brandData
+          brandData:brandData,
+          introduction:introduction,
+          introduce:introduce
       }
     },
     components: {
@@ -123,6 +125,7 @@ import MheadTemplate from "../../components/mobile/headTemplate.vue";
       MheadTemplate
     },
   }
+//发展历程
 let developmentData = [
   {myear:'2018年', year:'', month:'05月', des:'果速送不单单依靠水果批发市场，开始走产地直销，与多家水果农业基地合作，达成战略伙伴；'},
   {myear:'',year:'', month:'03月', des:'果速送杭州商家会员数量突破3500家，日交易额突破25万元；果速送南京站商家会员数突破1500家，日交易额突破15万元；果速送宁波站商家会员数突破1000家，日交易额突破8万元；'},
@@ -149,12 +152,25 @@ let developmentData = [
   {myear:'',year:'', month:'09月', des:'正式成立“果速送”项目开启新的战略规划，完成了“果速送”平台的商标注册、LOGO设计以及基本业务流的设计；'},
   {myear:'',year:'2015年', month:'08月', des:'公司提出互联网水果生鲜S2B战略规划，真正解决杭州市中小型水果零售渠道开店难的根本问题；'},
 ]
+//品牌理念
 let brandData = [
   {title:'专业',des:'专业的团队运作，严格把关果速送平台的每一个环节，共筑优质水果生态链。'},
   {title:'便捷',des:'在果速送平台直接下单，批发预定水果，告别严寒酷暑，坐等配送上门。'},
   {title:'实惠',des:'移动的水果批发市场，实时更新水果信息，批发价直供，不加价，更优惠。'},
   {title:'省心',des:'果速送商城随时随地下单，提前备货，出货快，无库存，低损耗，省心无忧。'},
 ]
+//品牌简介
+let introduction ={
+  img:"../../static/image/gsjs_title.png", // 标题前的图片
+  text:"“果速送”为杭州果速信息科技有限公司旗下品牌。品牌成立于2015年，是一个立足于高科技互联网技术，经营水果批发、配送于一体的全品类综合服务性品牌，打造了全国地区一站式水果采购配送的服务平台。",
+  text1:"果速送平台致力于解决中小型水果店及有持续水果采购需求的餐饮店解决水果进货问题。我们严格把控水果把控源头，建立完善的配送体系，提供一站式采购配送服务，解决客户采购累、进价高等实质性问题。"
+}
+//团队介绍
+let introduce ={
+  text:"公司拥有一支富有朝气的团队，我们的团队成员来自五湖四海，是综合性的专业团队。有互联网行业精英，有丰富果蔬经营经验的采购专员，有媒体从业人员，有优质的配送队伍。为了一个共同的梦想走到了一起。",
+  text1:"我们虽然拥有不同的性格、教育背景和工作经历，但都有共同的一个特点：我们满怀理想，但又脚踏实地地去实现。",
+  text2:"在这里，我们严格把关果速送平台运行的每一个环节，共筑优质水果生态链；我们优势互补，拥有无限广阔的施展空间；在这里，我们在一起，没有曲高和寡，只有相伴前行。"
+}
 </script>
 
 <style lang="less">

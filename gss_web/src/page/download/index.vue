@@ -6,11 +6,11 @@
       <div class="download_area container">
         <dl class="row code_area">
           <dt class="col-md-5">
-            <img src="../../image/app_left.png" alt="">
+            <img :src="downloadText.designImg" alt="">
           </dt>
           <dd class="col-md-7">
               <div class="part1">
-                <img src="../../image/app_right1.png" alt=""> <span>果速送APP下载</span>
+                <img :src="downloadText.gssLogo" alt=""> <span>果速送APP下载</span>
               </div>
               <div class="row" v-for="(item,index) in downloadData " :key="index">
                 <div class="col-md-4"><img class="code" :src="item.img" alt=""></div>
@@ -23,11 +23,11 @@
         </dl>
         <dl class="row">
             <dd class="col-md-9">
-              <p>全国地区专业水果批发配送平台，平台最新优惠、开店实用技巧应有尽有。</p>
-              <p>果速送，实现您的0元开店梦，帮您开一家更赚钱的水果店</p>
+              <p>{{downloadText.text1}}</p>
+              <p>{{downloadText.text2}}</p>
             </dd>
             <dd class="col-md-2">
-                <img src="../../image/app_bottom.png" alt="">
+                <img :src="downloadText.appCode" alt="">
             </dd>
         </dl>
       </div>
@@ -38,7 +38,7 @@
       <MheadTemplate :title="title"></MheadTemplate>
       <div class="content">
         <div class="part_one">
-          <img src="../../image/app_right1.png" alt="" width="64px">
+          <img :src="downloadText.gssLogo" alt="" width="64px">
           <span>果速送APP下载</span>
         </div>
         <div class="phone_client" v-for="(item,index) in downloadData " :key="index">
@@ -49,12 +49,12 @@
           </div>
         </div>
         <div class="app_img">
-          <img src="../../image/app_left.png" width="226px" alt="">
+          <img :src="downloadText.designImg" width="226px" alt="">
         </div>
         <div class="part_two">
-          <img src="../../image/mobile/app3.png" alt="" width="98px">
-          <p>全国地区专业水果批发配送平台，平台最新优惠、开店实用技巧应有尽有。</p>
-          <p>果速送，实现您的0元开店梦，帮您开一家更赚钱的水果店</p>
+          <img :src="downloadText.appCode" alt="" width="98px">
+          <p>{{downloadText.text1}}</p>
+          <p>{{downloadText.text2}}</p>
         </div>
       </div>
       <Mfooter></Mfooter>
@@ -76,8 +76,8 @@ import MheadTemplate from "../../components/mobile/headTemplate.vue";
     data() {
       return {
       title:{0:'APP下载',1:'/App download'},
-      downloadData:downloadData
-
+      downloadData:downloadData,
+      downloadText:downloadText
       }
     },
     components: {
@@ -89,10 +89,18 @@ import MheadTemplate from "../../components/mobile/headTemplate.vue";
       MheadTemplate
     },
   }
+// 下载方式数据
 let downloadData = [
   {img:'../../static/image/ios01.jpg',text:'扫描iOS端',des:'下载更快捷'},
   {img:'../../static/image/androin01.jpg',text:'扫描Android端',des:'下载更快捷'},
 ]
+let downloadText ={
+  gssLogo:'../../static/image/app_right1.png',
+  appCode:'../../static/image/app_bottom.png',
+  designImg:'../../static/image/app_left.png',
+  text1:'全国地区专业水果批发配送平台，平台最新优惠、开店实用技巧应有尽有。',
+  text2:'果速送，实现您的0元开店梦，帮您开一家更赚钱的水果店',
+}
 </script>
 
 <style lang="less">
