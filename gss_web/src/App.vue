@@ -12,7 +12,6 @@ export default {
 
 <style>
 html, body{
-  height: 100%;
   overflow: auto;
 }
 #app {

@@ -60,7 +60,7 @@
         <router-link :to="'download'" tag="div">
           <img src="../../image/mobile/bg3.png" class="download" alt="" >
         </router-link>
-        <a href="#content_area" @click="animate"><img src="../../image/mobile/bg4.png"  class="down" alt=""></a>
+        <span  @click="animate"><img src="../../image/mobile/bg4.png"  class="down" alt=""></span>
       </div>
       <div id="content_area">
         <div class="area_first">
@@ -130,7 +130,7 @@ import { constants } from 'fs';
     methods:{
       animate(){
         var id="content_area";
-        $("html,body").animate({scrollTop: $("div#"+id).offset().top - 70}, 500);
+        $("html,body").animate({scrollTop: 590}, 500);
       }
     }
   }

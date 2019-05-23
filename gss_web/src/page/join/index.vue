@@ -317,7 +317,7 @@ import { close, constants } from 'fs';
       },
       occupation(index){
         this.occupationData = jsonData[index]
-        $("body").css({overflow:"hidden"});
+        $("html,body").css({overflow:"hidden"});
         // this.$nextTick(function () {
         //   let parentHeight =  $('.Mpopover').height();
         //   let childHeight = $('.Mpopover .part').height()
@@ -328,7 +328,7 @@ import { close, constants } from 'fs';
       },
       close(){
         this.occupationData = null;
-        $("body").css({overflow:"auto"});
+        $("html,body").css({overflow:"auto"});
       }
     }
   }
