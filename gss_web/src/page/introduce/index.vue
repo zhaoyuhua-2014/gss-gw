@@ -15,16 +15,16 @@
           </div>
           <div class="development_history">
             <div class='title'><img :src="introduction.img" alt=""><span>发展历程</span></div>
-            <div class="development">
+            <div class="development" v-if="developmentData.length">
               <dl v-for="(item,index) in developmentData " :key="index"  class="row">
                 <dt class="col-md-3">
-                  <span class="year">{{item.year}}</span>
-                  <span class="month">{{item.month}}</span>
+                  <span class="year">{{item.yearText}}</span>
+                  <span class="month">{{item.monthText}}</span>
                   <img src="../../image/gsjs-circle.png" alt="">
                   <img src="../../image/gsjs-line.png" alt="">
                   <img src="../../image/gsjs-dian.png" alt="">
                 </dt>
-                <dd class="col-md-9">{{item.des}}</dd>
+                <dd class="col-md-9">{{item.description}}</dd>
                 <dd class='line_position' v-show="index!=(developmentData.length-1)"><img src="../../image/gsjs_shu.png" alt=""> </dd>
               </dl>
             </div>
@@ -63,13 +63,13 @@
         </div>
         <div class="content_two">
           <div class='title'><img :src="introduction.img" alt=""><span>发展历程</span></div>
-          <dl  v-for="(item,index) in developmentData " :key="index" >
-            <dt class="year" v-show="item.myear != ''">{{item.myear}}</dt>
+          <dl  v-for="(item,index) in developmentData " :key="index" v-if="developmentData.length" >
+            <dt class="year" v-show="item.yearText1 != ''">{{item.yearText1}}</dt>
             <dd class="clearfix">
-              <span class="month pull-left">{{item.month}}</span>
+              <span class="month pull-left">{{item.monthText}}</span>
               <div class="pull-left clearfix" >
                 <img class="pull-left" src="../../image/gsjs-circle.png" alt="" width="16px">
-                <p class="pull-left">{{item.des}}</p>
+                <p class="pull-left">{{item.description}}</p>
               </div>
             </dd>
           </dl>
@@ -105,12 +105,16 @@ import headTemplate from "../../components/pc/headTemplate.vue";
 import MheaderNav from "../../components/mobile/nav.vue";
 import Mfooter from "../../components/mobile/footer.vue";
 import MheadTemplate from "../../components/mobile/headTemplate.vue";
+
+
+import { getDevelopHistoryList } from "@/api/index.js";
+
   export default {
     name:'introduce',
     data() {
       return {
           title:{0:'公司介绍 ',1:'/Company introduction'},
-          developmentData:developmentData,
+          developmentData:[],
           brandData:brandData,
           introduction:introduction,
           introduce:introduce
@@ -123,6 +127,41 @@ import MheadTemplate from "../../components/mobile/headTemplate.vue";
       MheaderNav,
       Mfooter,
       MheadTemplate
+    },
+    mounted(){
+    	let _this = this;
+    	
+    	getDevelopHistoryList().then( d =>{
+    		let list = (d.data || []).map( item => {
+    			item.timeList = item.historyTime.split("-");
+    			item.year = item.timeList[0];
+    			item.monthText = item.timeList[1]+'月';
+    			return item;
+    		}).map( ( item , index ,l )=>{
+    			if ( (index + 1) != l.length) {
+    				if ( item.year != l[index + 1].year ) {
+    					item.yearText = item.timeList[0]+'年';
+    				} else{
+    					item.yearText = '';
+    				}
+    			}else{
+    				item.yearText = item.timeList[0]+'年';
+    			}
+    			return item;
+    		}).reverse().map(( item , index ,l )=>{
+    			if ( (index + 1) != l.length) {
+    				if ( item.year != l[index + 1].year ) {
+    					item.yearText1 = item.timeList[0]+'年';
+    				} else{
+    					item.yearText1 = '';
+    				}
+    			}else{
+    				item.yearText1 = item.timeList[0]+'年';
+    			}
+    			return item;
+    		}).reverse();
+    		_this.$data.developmentData = list
+    	})
     },
   }
 //发展历程

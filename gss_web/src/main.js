@@ -4,11 +4,17 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import $ from 'jquery'
+import Vant from 'vant'
+import 'vant/lib/index.css'
+
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/js/bootstrap.min.js"
 import "babel-polyfill"
 
 Vue.config.productionTip = false
+Vue.prototype.$Origin = 'https://brp.hhu.edu.cn'
+
+Vue.use(Vant)
 
 router.afterEach((to,from,next) => {
   // window.scrollTo(0,0)

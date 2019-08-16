@@ -27,11 +27,11 @@
                       </thead>
                       <tbody>
                         <tr v-for="(item,index) in data" :key="index">
-                          <td class="td_hover" @click="joinDetail(index)">{{item.name}}</td>
-                          <td>{{item.typeText}}</td>
-                          <td>{{item.address}}</td>
-                          <td>{{item.num}}</td>
-                          <td>{{item.time}}</td>
+                          <td class="td_hover" @click="joinDetail(item)">{{item.position}}</td>
+                          <td>{{item.positionType}}</td>
+                          <td>{{item.city}}</td>
+                          <td>{{item.count}}</td>
+                          <td>{{item.updateTime}}</td>
                         </tr>
                       </tbody>
                     </table>
@@ -80,7 +80,7 @@
         <div class="part_three">
           <img src="../../image/mobile/gw.png" alt="" width="132px">
           <ul class="occupation">
-            <li v-for="(item,index) in data" :key="index" @click="occupation(index)">{{item.name}}</li>
+            <li v-for="(item,index) in data" :key="index" @click="occupation(item)">{{item.position}}</li>
           </ul>
           <img src="../../image/mobile/wt.png" alt="" width="132px">
           <div class="problem">
@@ -112,14 +112,17 @@ import MheaderNav from "../../components/mobile/nav.vue";
 import Mfooter from "../../components/mobile/footer.vue";
 import MheadTemplate from "../../components/mobile/headTemplate.vue";
 import Mpopover from "../../components/mobile/popover.vue";
-import { close, constants } from 'fs';
+
+
+import { getJobList } from "@/api/index.js";
+
   export default {
     name:'join',
     data() {
       return {
         tab:0,
         title:{0:"加入我们", 1:"/Join us"},
-        data:data,
+        data:[],
         thData:thData,
         imgData:imgData,
         companyData:companyData,
@@ -151,7 +154,8 @@ import { close, constants } from 'fs';
       let mapTwo = new AMap.Map('map_two',{
         resizeEnable:true,
         zoom:15,
-        center:[118.8711510000,31.9888300000]
+        //118.8711510000,31.9888300000
+        center:[118.8644000000,31.9907900000]
       });
       let mapThree = new AMap.Map('map_three',{
         resizeEnable:true,
@@ -211,7 +215,7 @@ import { close, constants } from 'fs';
 
         let infoWindowTwo = new SimpleInfoWindow({
             infoTitle: '<strong>南京果送信息科技有限公司</strong>',
-            infoBody: '<p class="my-desc">电话:025-52112127<br/> 地址:南京市江宁区东山街道润发路330号，江苏鞋城1号楼一楼</p>',
+            infoBody: '<p class="my-desc">电话:025-52718701<br/> 地址:南京市江宁区东山街道润麒路86号B座1层102-3室</p>',
       //基点指向marker的头部位置
             offset: new AMap.Pixel(0, -31)
         });
@@ -309,15 +313,29 @@ import { close, constants } from 'fs';
               liteStyle: true
           }));
       });
+      let _this = this;
+      getJobList().then( d =>{
+	      _this.data = d.data || [];
+	    }).catch( e =>{
+	        console.log(e)
+	    })
     },
 
     methods:{
-      joinDetail(index){
-         this.$router.push({path:'/jobDetails',query:{index:index}})
+      joinDetail(item){
+      	console.log(item)
+      	if(item.url){
+      		window.open(item.url , '_blank')
+      	}
+        // this.$router.push({path:'/jobDetails',query:{index:index}})
       },
-      occupation(index){
-        this.occupationData = jsonData[index]
-        $("html,body").css({overflow:"hidden"});
+      occupation(item){
+      	console.log(item)
+      	if(item.url){
+      		window.open(item.url , '_blank')
+      	}
+//      this.occupationData = jsonData[index]
+//      $("html,body").css({overflow:"hidden"});
         // this.$nextTick(function () {
         //   let parentHeight =  $('.Mpopover').height();
         //   let childHeight = $('.Mpopover .part').height()
@@ -540,6 +558,7 @@ let companyData ={
             background-color: #fc6b7c;
             color: @white_color;
             text-align: center;
+            cursor:pointer;
           }
         }
         .problem{
