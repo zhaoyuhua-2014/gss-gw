@@ -115,7 +115,7 @@ import Mpopover from "../../components/mobile/popover.vue";
 
 
 import { getJobList } from "@/api/index.js";
-
+var UA = window.navigator.userAgent;
   export default {
     name:'join',
     data() {
@@ -330,9 +330,13 @@ import { getJobList } from "@/api/index.js";
         // this.$router.push({path:'/jobDetails',query:{index:index}})
       },
       occupation(item){
-      	console.log(item)
       	if(item.url){
-      		window.open(item.url , '_blank')
+      		if(this.isPhone()){
+      			window.location.href = item.url;
+      		}else{
+      			window.open(item.url , '_blank')
+      		}
+      		
       	}
 //      this.occupationData = jsonData[index]
 //      $("html,body").css({overflow:"hidden"});
@@ -344,6 +348,20 @@ import { getJobList } from "@/api/index.js";
         //   }
         // })
       },
+      // 判断是否为移动设备
+			isPhone(){
+				var ua = navigator.userAgent.toLowerCase(),
+		        bIsIpad = ua.match(/ipad/i) == "ipad",
+		        bIsIphoneOs = ua.match(/iphone os/i) == "iphone os",
+		        bIsMidp = ua.match(/midp/i) == "midp",
+		        bIsUc7 = ua.match(/rv:1.2.3.4/i) == "rv:1.2.3.4",
+		        bIsUc = ua.match(/ucweb/i) == "ucweb",
+		        bIsAndroid = ua.match(/android/i) == "android",
+		        bIsCE = ua.match(/windows ce/i) == "windows ce",
+		        bIsWM = ua.match(/windows mobile/i) == "windows mobile";
+		
+			    return bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM;
+			},
       close(){
         this.occupationData = null;
         $("html,body").css({overflow:"auto"});

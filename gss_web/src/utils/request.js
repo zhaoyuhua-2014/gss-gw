@@ -59,8 +59,8 @@ var tryCloseLoading = () => {
   }
 }
 axios.defaults.timeout = 20000;
-//https://47.99.215.6:8003 https://wt.itertk.com
-axios.defaults.baseURL = 'http://testapp.guoss.cn/gssapi/server/api.do?';
+//http://testapp.guoss.cn/gssapi/server/api.do
+axios.defaults.baseURL = 'http://app.guoss.cn/gss_api/server/api.do';
 //axios.defaults.baseURL = 'https://wt.itertk.com';
 axios.defaults.headers.post['Content-Type'] = 'application/json'
 axios.defaults.headers.get['Content-Type'] = 'application/json'
