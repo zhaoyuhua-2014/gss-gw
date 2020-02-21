@@ -59,6 +59,7 @@
             </dd>
           </dl>
         </div>
+        <img src="../../../static/image/hzsj_gbf.png"/>
       </div>
       <Mfooter></Mfooter>
     </div>
@@ -95,7 +96,7 @@ import MheadTemplate from "../../components/mobile/headTemplate.vue";
 // 合作商家 数据
 let cooperationData =[
   {img:"../../static/image/hzsj_grh.png",name:"果然好",text:"专注水果，领鲜生活"},
-  {img:"../../static/image/hzsj_gdm.png",name:"果多美",text:"我们只卖好吃的水果"},
+  {img:"../../static/image/hzsj_gbf.png",name:"果缤纷",text:"我们只卖好吃的水果"},
   {img:"../../static/image/hzsj_axg.png",name:"爱鲜果",text:"爱鲜果，爱美丽，爱生活，爱健康"},
   {img:"../../static/image/hzsj_lxsg.png",name:"领鲜水果",text:"最新鲜的水果，只为你"},
   {img:"../../static/image/hzsj_xgw.png",name:"鲜果屋",text:"每日新鲜，健康生活"},
@@ -128,6 +129,9 @@ let wayData=[
           margin-bottom:20px;
           border:1px solid @gray_color;
           text-align: center;
+          dt img {
+          	width: 100%;
+          }
           dd{
             background-color:@btn_color;
             color: @white_color;
@@ -190,6 +194,9 @@ let wayData=[
         width: 48%;
         text-align: center;
         border: 1px solid @gray_color;
+        dt img{
+        	width: 100%;
+        }
         dd{
           padding:6px 0;
           background-color: @theme_color;

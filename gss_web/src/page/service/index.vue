@@ -77,7 +77,7 @@ import MheadTemplate from "../../components/mobile/headTemplate.vue";
 // 流程信息
 let data = [
   {Mnum:'../../static/image/fwbz_no1.png', num:'../../static/image/no1.png',img:'../../static/image/service1.png', title:'专业采购', isOdd:'0', des:'我们有一支专业的采购团队，奔波于全国各个水果产地和水果市场，收集市场最新信息，查询当前市场行情，耐心的询价、比价、议价、用专业的眼光、严格的筛选标准，为客户挑选优质且性价比高的果品。'  },
-  {Mnum:'../../static/image/fwbz_no2.png',num:'../../static/image/no2.png',img:'../../static/image/service2.png', title:'严格质检',isOdd:'1', des:'我们有一支专业的质检团队，遵循合理的质量监测方法，以最严格的标准为客户挑选最优质的果品。质量是企业的生存根本，也是我们的坚持与执着所在，全国跟踪水果质量，层层把关，精挑细选。' },
+  {Mnum:'../../static/image/fwbz_no2.png',num:'../../static/image/no2.png',img:'../../static/image/service2.png', title:'严格质检',isOdd:'1', des:'我们有一支专业的质检团队，遵循合理的质量监测方法，以最严格的标准为客户挑选最优质的果品。质量是企业的生存根本，也是我们的坚持与执着所在，全程跟踪水果质量，层层把关，精挑细选。' },
   {Mnum:'../../static/image/fwbz_no3.png',num:'../../static/image/no3.png',img:'../../static/image/service3.png', title:'精细分捡', isOdd:'0', des:'我们有一支专业的分拣团队，依据顾客的订单要求或配送计划，迅速、准确地将商品从其储位或其他区位捡取出来，由经验丰富的分拣人员，将商品规整放置，杜绝误单错单。准确、高效是我们不变的追求。'  },
   {Mnum:'../../static/image/fwbz_no4.png',num:'../../static/image/no4.png',img:'../../static/image/service4.png', title:'准时送达',isOdd:'1', des:'我们有一支专业的配送队伍，严格的人员筛选，统一的物流培训，科学的分配调度，合理的路线规划，确保我们的配送人员，以积极热情的服务态度，准时的将客户所需要的商品及时送达。' },
   {Mnum:'../../static/image/fwbz_no5.png',num:'../../static/image/no5.png',img:'../../static/image/service5.png', title:'验收保障', isOdd:'0', des:'我们给予客户充分的服务保障，合理验收是至关重要的一环。给每位客户预留足够的验货时间，秉承服务至上的原则，用专业的标准辅助客户验收商品，质量问题及时解决，客户验收后在付款，放心无忧。'  },
