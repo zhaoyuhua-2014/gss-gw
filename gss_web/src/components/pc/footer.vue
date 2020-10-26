@@ -45,7 +45,7 @@
 
     </div>
     <div class="footer_bottom">
-      <p>浙ICP备13029432号 | Copyright©2015-2019 杭州果速科技有限公司 版权所有</p>
+      <p>浙ICP备13029432号 | Copyright©2015-2020 杭州果速科技有限公司 版权所有</p>
     </div>
   </div>
 </template>
@@ -53,12 +53,12 @@
 <script>
   export default {
     name:'comFooter',
-    data() {
-      return {
+    data() {
+      return {
 
-      }
-    },
-  }
+      }
+    },
+  }
 </script>
 
 <style lang="less" scoped>
