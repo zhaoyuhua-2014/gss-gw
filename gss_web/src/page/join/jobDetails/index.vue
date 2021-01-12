@@ -63,7 +63,7 @@
       </div>
     </div>
      <div class="footer_bottom">
-        <p>浙ICP备13029432号 | Copyright©2015-2019 杭州果速科技有限公司 版权所有</p>
+        <p><a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">浙ICP备13029432号-5 | Copyright©2015-2021</a> 杭州果速科技有限公司 版权所有</p>
       </div>
   </div>
 </template>
@@ -73,13 +73,13 @@ import headerNav from "../../../components/pc/nav.vue";
 import { constants } from 'fs';
   export default {
     name:"jobDetails",
-    data() {
-      return {
+    data() {
+      return {
         data:{},
         jsonData:jsonData,
         num:null
-      }
-    },
+      }
+    },
     components:{
       headerNav
     },
@@ -93,7 +93,7 @@ import { constants } from 'fs';
         window.open(routerJump.href,'_blank')
       }
     }
-  }
+  }
 let jsonData = [{
   name:'仓库管理员',
   address:'杭州-余杭区-勾庄',
@@ -122,8 +122,8 @@ let jsonData = [{
   degree:'中专',
   num:'5',
   time:'2018-06-07',
-  jobDuties:' 1、处理毎日客户订单情况并及时回报； <br/>2、负责与仓库对接，合理安排发货任务；<br/>3、统计销售及回款数据，及时上报领导；<br/>4、完成上级交给的其它事务性工作；',
-  jobRequirements:'1.18-30 岁，中专以上学历，踏实，热情，普通话标准清晰，反应敏捷、表达能力强；<br/>2.能吃苦，服从管理，善于沟通，有一定计算机基础，能熟练使用OFFICE 软件；<br/>3.有责任心，有较强的工作积极主动性，懂得如何调配时间，合理安排工作；<br/>4.身体健康、品行端正、无不良嗜好；<br/>5.具备一定的市场分析及判断能力，良好的客户服务意识；<br/>6.有责任心，有团队协作精神，能承受较大的工作压力；'
+  jobDuties:' 1、处理毎日客户订单情况并及时回报； <br/>2、负责与仓库对接，合理安排发货任务；<br/>3、统计销售及回款数据，及时上报领导；<br/>4、完成上级交给的其它事务性工作；',
+  jobRequirements:'1.18-30 岁，中专以上学历，踏实，热情，普通话标准清晰，反应敏捷、表达能力强；<br/>2.能吃苦，服从管理，善于沟通，有一定计算机基础，能熟练使用OFFICE 软件；<br/>3.有责任心，有较强的工作积极主动性，懂得如何调配时间，合理安排工作；<br/>4.身体健康、品行端正、无不良嗜好；<br/>5.具备一定的市场分析及判断能力，良好的客户服务意识；<br/>6.有责任心，有团队协作精神，能承受较大的工作压力；'
 },{
   name:'采购专员',
   address:'杭州-余杭区-勾庄',
@@ -132,7 +132,7 @@ let jsonData = [{
   degree:'高中',
   num:'5',
   time:'2018-06-07',
-  jobDuties:' 1、水果采购工作。',
+  jobDuties:' 1、水果采购工作。',
   jobRequirements:'1.高中以上学历，有水果采购工作经验优先考虑。<br/>2.责任心强， 人际沟通交往能力强，能独立开展工作，具备一定的承压能力。<br/>3.掌握水果品类的名称、规格、单价、产地。<br/>4.较强的谈判沟通能力，能与商家议价节约采购成本。'
 }];
 </script>
@@ -306,7 +306,13 @@ let jsonData = [{
         text-align: center;
         line-height: 80px;
         color: #555;
-        background-color: @gray_color
+        background-color: @gray_color;
+        a{
+          color: #333333;
+        }
+        a:link{
+          color: #333333;
+        }
       }
     }
   }

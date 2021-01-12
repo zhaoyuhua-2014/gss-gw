@@ -45,7 +45,7 @@
 
     </div>
     <div class="footer_bottom">
-      <p>浙ICP备13029432号 | Copyright©2015-2019 杭州果速科技有限公司 版权所有</p>
+      <p><a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">浙ICP备13029432号-5 | Copyright©2015-2021</a> 杭州果速科技有限公司 版权所有</p>
     </div>
   </div>
 </template>
@@ -53,12 +53,12 @@
 <script>
   export default {
     name:'comFooter',
-    data() {
-      return {
+    data() {
+      return {
 
-      }
-    },
-  }
+      }
+    },
+  }
 </script>
 
 <style lang="less" scoped>
@@ -78,7 +78,13 @@
       text-align: center;
       line-height: 80px;
       color: #555;
-      background-color: @gray_color
+      background-color: @gray_color;
+      a{
+        color: #333333;
+      }
+      a:link{
+        color: #333333;
+      }
     }
   }
   .col-md-4{
