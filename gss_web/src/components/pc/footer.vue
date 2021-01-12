@@ -53,12 +53,12 @@
 <script>
   export default {
     name:'comFooter',
-    data() {
-      return {
+    data() {
+      return {
 
-      }
-    },
-  }
+      }
+    },
+  }
 </script>
 
 <style lang="less" scoped>

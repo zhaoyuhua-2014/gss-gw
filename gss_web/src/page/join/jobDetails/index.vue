@@ -70,7 +70,6 @@
 
 <script>
 import headerNav from "../../../components/pc/nav.vue";
-import { constants } from 'fs';
   export default {
     name:"jobDetails",
     data() {
